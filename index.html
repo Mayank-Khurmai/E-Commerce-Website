@@ -1,4 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>My Shop</title>
+<style>
 
+div{
+        width: 80px;
+        height: 80px;
+        border: 1px solid red;
+         background: red;
+    bottom: 0;
+        -webkit-animation-name: mov;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        animation-name: mov;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+@-webkit-keyframe mov{
+    0%{background: aqua;}
+    25%{background: black;}
+    50%{background: brown;}
+    75%{background: chartreuse;}
+    100%{background: aqua;}
+    }
+@keyframe mov{
+    0%{background: aqua;}
+    25%{background: black;}
+    50%{background: brown;}
+    75%{background: chartreuse;}
+    100%{background: aqua;}
+    }
+    
+/*@keyframe mov{
+    0%{float: left;}
+    25%{float: left; margin-top: 100%;}
+    50%{float: right; margin-top: 100%;}
+    75%{float: right;}
+    }
+*/
+</style>
+</head>
+<body>
+
+<div>
+</div>    
+    
+</body>
 </html>
