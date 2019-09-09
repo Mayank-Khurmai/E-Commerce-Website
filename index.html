@@ -2,48 +2,200 @@
 <html>
 <head>
 <title>My Shop</title>
-<style>
-
-div{
-        width: 80px;
-        height: 80px;
-        border: 1px solid red;
-         background: red;
-    bottom: 0;
-        -webkit-animation-name: mov;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-iteration-count: infinite;
-        animation-name: mov;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-    }
-@-webkit-keyframe mov{
-    0%{background: aqua;}
-    25%{background: black;}
-    50%{background: brown;}
-    75%{background: chartreuse;}
-    100%{background: aqua;}
-    }
-@keyframe mov{
-    0%{background: aqua;}
-    25%{background: black;}
-    50%{background: brown;}
-    75%{background: chartreuse;}
-    100%{background: aqua;}
-    }
-    
-/*@keyframe mov{
-    0%{float: left;}
-    25%{float: left; margin-top: 100%;}
-    50%{float: right; margin-top: 100%;}
-    75%{float: right;}
-    }
-*/
-</style>
+<link rel="stylesheet" href="css.css">
 </head>
 <body>
 
-<div>
+<div id="outer-box">
+    
+<header>
+<h1 id="brand-name">myshop.com</h1>
+<p id="tag-lines">India`s largest Online e-commerce website</p>
+</header>
+<div id="white-space-header"></div>
+    
+    
+<nav>
+<form>
+<input type="search" name="search" id="search-box" placeholder="Search this site"/>
+<input type="submit" value="Search Now" id="search-btn"/>
+</form>
+<table id="nav-table">
+<tr>
+<td id="nav-box"><a href="#">Home</a></td>
+<td id="nav-box"><a href="#">Accesories</a></td>
+<td id="nav-box"><a href="#">Today's Deal</a></td>
+<td id="nav-box"><a href="#">Offer Zone</a></td>
+<td id="nav-box"><a href="#">Contact Us</a></td>
+<td id="nav-box-cart"><a href="#">Cart</a></td>
+</tr>
+</table>
+</nav>
+<div id="white-space-nav"></div>
+    
+    
+<div id="side-fix-div">
+
+<div id="search-by-category-div">
+<h1 id="search-by-category">Search By Category</h1>    
+</div> 
+    
+
+<div id="search-by-category-div2"> 
+
+<table width="100%" height="300px">
+<tr>
+<td><p id="tel">Pin Code</p></td>
+<td><input type ="tel" max="6"></td>
+</tr>
+<tr>
+<td><p id="product-type">Product Type</p></td>
+<td>
+<select name="product-category-type">
+<option value="all-rating">------Product Category------</option>
+<option value="zero-rating">TV &amp; Appliances </option>
+<option value="one-rating">Mens Wear</option>
+<option value="two-rating">Womens Wear</option>
+<option value="three-rating">Home &amp; Furniture</option>
+<option value="four-rating">Electronics</option>
+<option value="five-rating">Sports Wear</option>
+</select>    
+</td>
+</tr>
+<tr>
+<td><p id="rating">Choose rating</p></td>
+<td>
+<select name="price-range">
+<option value="all-rating">------Product Rating------</option>
+<option value="zero-rating">0</option>
+<option value="one-rating">1</option>
+<option value="two-rating">2</option>
+<option value="three-rating">3</option>
+<option value="four-rating">4</option>
+<option value="five-rating">5</option>
+</select>    
+</td>
+</tr>
+<tr>
+<td><p id="price-range">Price Range</p></td> 
+<td><span><sup>50</sup></span><input type="range" min="50" max="10000"><span><sup>10000</sup></span></td>
+</tr>
+<tr>
+<td><input type="submit" value="Search"></td>
+</tr>
+</table>    
+
+    
+</div>     
+    
+</div>
+
+<div id="side-right-div">
+
+<div id="cat-a">
+<div class="size">
+<div class="s-img" id="cat-img-a1"></div>
+<div class="s-img-detail">Rs</div>    
+</div> 
+<div class="size"><div class="s-img" id="cat-img-a2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-a3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-a4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-a5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-a6"></div></div>  
+</div>
+    
+<div id="cat-b">
+<div class="size"><div class="s-img" id="cat-img-b1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-b2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-b3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-b4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-b5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-b6"></div></div>  
+</div>
+    
+<div id="cat-c">
+<div class="size"><div class="s-img" id="cat-img-c1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-c2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-c3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-c4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-c5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-c6"></div></div>  
+</div>    
+
+<div id="cat-d">
+<div class="size"><div class="s-img" id="cat-img-d1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-d2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-d3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-d4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-d5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-d6"></div></div>  
+</div>
+    
+<div id="cat-e">
+<div class="size"><div class="s-img" id="cat-img-e1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-e2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-e3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-e4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-e5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-e6"></div></div>  
+</div>    
+
+<div id="cat-f">
+<div class="size"><div class="s-img" id="cat-img-f1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-f2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-f3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-f4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-f5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-f6"></div></div>  
+</div> 
+    
+<div id="cat-g">
+<div class="size"><div class="s-img" id="cat-img-g1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-g2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-g3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-g4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-g5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-g6"></div></div>  
+</div> 
+    
+<div id="cat-h">
+<div class="size"><div class="s-img" id="cat-img-h1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-h2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-h3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-h4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-h5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-h6"></div></div>  
+</div> 
+    
+<div id="cat-i">
+<div class="size"><div class="s-img" id="cat-img-i1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-i2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-i3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-i4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-i5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-i6"></div></div>  
+</div> 
+    
+<div id="cat-j">
+<div class="size"><div class="s-img" id="cat-img-j1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-j2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-j3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-j4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-j5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-j6"></div></div>  
+</div>  
+    
+<div id="cat-k">
+<div class="size"><div class="s-img" id="cat-img-k1"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-k2"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-k3"></div></div> 
+<div class="size"><div class="s-img" id="cat-img-k4"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-k5"></div></div>  
+<div class="size"><div class="s-img" id="cat-img-k6"></div></div>  
+</div>     
+    
+</div>
+    
 </div>    
     
 </body>
