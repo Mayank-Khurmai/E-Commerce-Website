@@ -1,0 +1,626 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#outer-box{
+    width: 100%;
+    height: 700px;
+}
+
+header{
+    width:100%;
+    height:60px;
+    box-sizing:border-box;
+    background-color: aliceblue;
+    padding:5px;
+    position: fixed;
+}
+#white-space-header{
+    width:100%;
+    height:60px;
+    box-sizing:border-box;
+    padding:5px;
+}
+
+#brand-name{
+    float:left;
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    margin-top:7px;
+    margin-left:25px;
+
+}
+
+#tag-lines{
+    float:right;
+    font-family:calibri;
+    margin-right:25px;
+}
+
+nav{
+    width:100%;
+    height:105px;
+    float:left;
+    z-index: 1;
+    position: fixed;
+    box-sizing:border-box;
+    background-color: dimgrey;
+    padding:30px;
+}
+
+#white-space-nav{
+    width:100%;
+    height:105px;
+    box-sizing:border-box;
+    padding:5px;
+}
+
+#search-box{
+    width:500px;
+    height:40px;
+    border-style:none;
+    box-sizing:border-box;
+    float:left;
+    padding:5px;
+    font-size:15px;
+    margin-top:3px;
+}
+
+#search-btn{
+    border-style:none;
+    height:40px;
+    width:110px;
+    box-sizing:border-box;
+    float:left;
+    border-radius: 6px;
+    margin-left:3px;
+    background-color:white;	
+    margin-top:3px; 
+}
+
+
+#search-btn:hover{
+	background-color:red;	
+	transition:0.5s;
+}
+
+#nav-table{
+    float:right;
+    width:600px;
+    height:45px;
+    box-sizing:border-box;
+}
+
+#nav-box{
+    background-color:white;
+    width:20%;
+    border-radius: 6px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+#nav-box-cart{
+    background-color:white;
+    width:10%;
+    border-radius: 6px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+#nav-box-cart:hover{
+	background-color:red;	
+	transition:0.5s;
+}
+
+#nav-box:hover{
+	background-color:red;	
+	transition:0.5s;
+}
+
+a{
+    color:#323232;
+    text-decoration:none;
+    font-family:sans-serif;
+}
+
+
+#header-down-div{
+    width: 100%;
+    height: 150px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: dimgray;
+}
+
+#side-fix-div{
+    width: 25%;
+    height: 690px;
+    position: fixed;
+    padding: 10px;
+    float: left;
+    background-color: darkgrey;
+}
+
+#search-by-category-div{
+    width: 100%;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#search-by-category-div2{
+    width: 100%;
+    height: 300px;
+}
+
+#search-by-category{
+    text-align: center;
+    color: darkred;
+}
+
+#side-right-div{
+    width: 75%;
+    height: auto;
+    float: right;
+    background-color: antiquewhite;
+}
+
+.size{
+    width: 150px;
+    height: 210px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    float: left;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.s-img{
+    width: 100%;
+    height: 150px;
+    border-color: dimgray;
+    border-width: 1px;
+    border-style: ridge;
+}
+
+#cat-a{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-a1{
+    background-image: url(images/a1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-a2{
+    background-image: url(images/a2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-a3{
+    background-image: url(images/a3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-a4{
+    background-image: url(images/a4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-a5{
+    background-image: url(images/a5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-a6{
+    background-image: url(images/a6.jpeg);
+    background-size: cover;
+}
+
+#cat-b{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-b1{
+    background-image: url(images/b1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-b2{
+    background-image: url(images/b2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-b3{
+    background-image: url(images/b3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-b4{
+    background-image: url(images/b4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-b5{
+    background-image: url(images/b5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-b6{
+    background-image: url(images/b6.jpeg);
+    background-size: cover;
+}
+
+#cat-c{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-c1{
+    background-image: url(images/c1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-c2{
+    background-image: url(images/c2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-c3{
+    background-image: url(images/c3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-c4{
+    background-image: url(images/c4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-c5{
+    background-image: url(images/c5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-c6{
+    background-image: url(images/c6.jpeg);
+    background-size: cover;
+}
+
+#cat-d{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-d1{
+    background-image: url(images/d1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-d2{
+    background-image: url(images/d2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-d3{
+    background-image: url(images/d3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-d4{
+    background-image: url(images/d4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-d5{
+    background-image: url(images/d5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-d6{
+    background-image: url(images/d6.jpeg);
+    background-size: cover;
+}
+
+#cat-e{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-e1{
+    background-image: url(images/e1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-e2{
+    background-image: url(images/e2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-e3{
+    background-image: url(images/e3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-e4{
+    background-image: url(images/e4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-e5{
+    background-image: url(images/e5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-e6{
+    background-image: url(images/e6.jpeg);
+    background-size: cover;
+}
+
+#cat-f{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-f1{
+    background-image: url(images/f1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-f2{
+    background-image: url(images/f2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-f3{
+    background-image: url(images/f3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-f4{
+    background-image: url(images/f4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-f5{
+    background-image: url(images/f5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-f6{
+    background-image: url(images/f6.jpeg);
+    background-size: cover;
+}
+
+#cat-g{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-g1{
+    background-image: url(images/g1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-g2{
+    background-image: url(images/g2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-g3{
+    background-image: url(images/g3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-g4{
+    background-image: url(images/g4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-g5{
+    background-image: url(images/g5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-g6{
+    background-image: url(images/g6.jpeg);
+    background-size: cover;
+}
+
+#cat-h{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-h1{
+    background-image: url(images/h1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-h2{
+    background-image: url(images/h2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-h3{
+    background-image: url(images/h3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-h4{
+    background-image: url(images/h4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-h5{
+    background-image: url(images/h5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-h6{
+    background-image: url(images/h6.jpeg);
+    background-size: cover;
+}
+
+#cat-i{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-i1{
+    background-image: url(images/i1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-i2{
+    background-image: url(images/i2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-i3{
+    background-image: url(images/i3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-i4{
+    background-image: url(images/i4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-i5{
+    background-image: url(images/i5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-i6{
+    background-image: url(images/i6.jpeg);
+    background-size: cover;
+}
+
+#cat-j{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-j1{
+    background-image: url(images/j1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-j2{
+    background-image: url(images/j2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-j3{
+    background-image: url(images/j3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-j4{
+    background-image: url(images/j4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-j5{
+    background-image: url(images/j5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-j6{
+    background-image: url(images/j6.jpeg);
+    background-size: cover;
+}
+
+#cat-k{
+    width: 100%;
+    height: 235px;
+    border-color: black;
+    margin-bottom: 25px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+#cat-img-k1{
+    background-image: url(images/k1.jpeg);
+    background-size: cover;
+}
+
+#cat-img-k2{
+    background-image: url(images/k2.jpeg);
+    background-size: cover;
+}
+
+#cat-img-k3{
+    background-image: url(images/k3.jpeg);
+    background-size: cover;
+}
+
+#cat-img-k4{
+    background-image: url(images/k4.jpeg);
+    background-size: cover;
+}
+
+#cat-img-k5{
+    background-image: url(images/k5.jpeg);
+    background-size: cover;
+}
+
+#cat-img-k6{
+    background-image: url(images/k6.jpeg);
+    background-size: cover;
+}
