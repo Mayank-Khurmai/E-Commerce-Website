@@ -3,6 +3,11 @@
 if(isset($_SESSION['emailadd']))
 {
      $_SESSION['emailadd'] = $email;
+    $mysession = $_SESSION['emailadd'];
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
+    $records = mysqli_query($db, $sql);
+    $details = mysqli_fetch_assoc($records);
 }
 else
 {
@@ -10,13 +15,7 @@ else
 }
 
 ?>
-<?php
-    $mysession = $_SESSION['emailadd'];
-    $db = mysqli_connect("localhost", "root", "", "myshopdb");
-    $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
-    $records = mysqli_query($db, $sql);
-    $details = mysqli_fetch_assoc($records);
-?>
+
 
 
 <!DOCTYPE html>
@@ -58,7 +57,7 @@ else
     <li><a href="#">Accesories</a></li>
     <li><a href="#">Today's Deal</a></li>
     <li><a href="#">Offer Zone</a></li>
-    <li><a href="#">Contact Us</a></li>
+    <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
  </ul>
@@ -128,37 +127,39 @@ else
 <div id="side-right-div">
 
 <div id="cat-a">
-<a href="#">
+<form method="post" action="productinfo.php">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a1"></div>
     <?php echo "<span><center><small>Desnis Men's Shirt <br> 20% Off </small><br> Rs. <b><big>670</big></b> | <strike><small>Rs. 980</small></strike><center></span>"; ?>
     </div>
 </a> 
-<a href="#">
+</form>
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a2"></div>
     <?php echo "<span><center><small>Sreats Men's Regular <br> 18% Off </small><br> Rs. <b><big>550</big></b> | <strike><small>Rs. 710</small></strike><center></span>"; ?>
     </div>
 </a>
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a3"></div>
     <?php echo "<span><center><small>Lion's roar Shirt <br> 25% Off </small><br> Rs. <b><big>770</big></b> | <strike><small>Rs. 1180</small></strike><center></span>"; ?>
     </div> 
 </a>
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a4"></div>
     <?php echo "<span><center><small>Dennim Blue  <br> 35% Off </small><br> Rs. <b><big>790</big></b> | <strike><small>Rs. 1340</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a5"></div>
     <?php echo "<span><center><small>Lingo Men's Cotton <br> 25% Off </small><br> Rs. <b><big>470</big></b> | <strike><small>Rs. 680</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-a6"></div>
     <?php echo "<span><center><small>campus Stura men's <br> 15% Off </small><br> Rs. <b><big>540</big></b> | <strike><small>Rs. 600</small></strike><center></span>"; ?>
@@ -169,37 +170,37 @@ else
     
     
 <div id="cat-b">
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b1"></div>
     <?php echo "<span><center><small>Quirky T-shirt <br> 40% Off </small><br> Rs. <b><big>400</big></b> | <strike><small>Rs. 780</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b2"></div>
     <?php echo "<span><center><small>Nighty Kurti <br> 50% Off </small><br> Rs. <b><big>550</big></b> | <strike><small>Rs. 1100</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b3"></div>
     <?php echo "<span><center><small>Elvis Crop <br> 40% Off </small><br> Rs. <b><big>620</big></b> | <strike><small>Rs. 1180</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b4"></div>
     <?php echo "<span><center><small>Party Frok <br> 23% Off </small><br> Rs. <b><big>450</big></b> | <strike><small>Rs. 650</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b5"></div>
     <?php echo "<span><center><small>Style Villi T-shirt <br> 25% Off </small><br> Rs. <b><big>770</big></b> | <strike><small>Rs. 960</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-b6"></div>
     <?php echo "<span><center><small>Party Fashion Gown <br> 15% Off </small><br> Rs. <b><big>1070</big></b> | <strike><small>Rs. 1280</small></strike><center></span>"; ?>
@@ -211,37 +212,37 @@ else
     
     
 <div id="cat-c">
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c1"></div>
     <?php echo "<span><center><small>Kids Vockey-tockey <br> 25% Off </small><br> Rs. <b><big>1000</big></b> | <strike><small>Rs. 1500</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c2"></div>
     <?php echo "<span><center><small> Hfid Speaker <br> 20% Off </small><br> Rs. <b><big>1750</big></b> | <strike><small>Rs. 2180</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c3"></div>
     <?php echo "<span><center><small>2-USB Speaker <br> 35% Off </small><br> Rs. <b><big>640</big></b> | <strike><small>Rs. 970</small></strike><center></span>"; ?>
     </div> 
 </a> 
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c4"></div>
     <?php echo "<span><center><small>Resberi Pi <br> 10% Off </small><br> Rs. <b><big>1200</big></b> | <strike><small>Rs. 1380</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c5"></div>
     <?php echo "<span><center><small>Mobile Stand <br> 40% Off </small><br> Rs. <b><big>230</big></b> | <strike><small>Rs. 480</small></strike><center></span>"; ?>
     </div> 
 </a>  
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-c6"></div>
     <?php echo "<span><center><small>USB Hardisk <br> 15% Off </small><br> Rs. <b><big>1770</big></b> | <strike><small>Rs. 1980</small></strike><center></span>"; ?>
@@ -252,7 +253,7 @@ else
     
     
 <div id="cat-d">
-<a href="#">
+<a href="productinfo.php">
     <div class="size">
     <div class="s-img" id="cat-img-d1"></div>
     <?php echo "<span><center><small>Android Galaxy <br> 20% Off </small><br> Rs. <b><big>16700</big></b> | <strike><small> 19800</small></strike><center></span>"; ?>
