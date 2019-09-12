@@ -90,10 +90,7 @@ legend{
 <table>
 <td>E-mail id</td>
 <td><input type="email" name="loginmail" required="required"></td>
-<tr>
-<td>Password</td>
-<td><input type="password" name="loginpassword" required="required"></td>
-</tr>
+
 <tr colspan="2">
 <td colspan="2">
     <input type="submit" id="submit-btn" name="loginbtn" value="Login Now">
