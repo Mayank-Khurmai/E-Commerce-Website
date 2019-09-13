@@ -1,7 +1,6 @@
 <?php
+   session_start();
 
-session_start();
-   
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
  
 $email = $_POST['loginmail'];

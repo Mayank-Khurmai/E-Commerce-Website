@@ -1,7 +1,9 @@
 <?php
 session_start();
+unset($_SESSION['emailadd']);
 session_destroy();
 include 'flogin.php';
+exit();
 ?>
 
 

@@ -5,8 +5,8 @@ session_start();
 
 <?php
     $mysession = $_SESSION['emailadd'];
-    $db = mysqli_connect("localhost", "root", "", "projectdb");
-    $sql = "SELECT * FROM registertable WHERE emailadd='$mysession'";
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
 ?>
@@ -18,6 +18,30 @@ session_start();
 <title>My Shop</title>
 <link rel="stylesheet" href="css2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+#side-fix-div-hth{
+    width: 40%;
+    height: 580px;
+    position: fixed;
+    padding: 10px;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-color: dimgrey;
+    border-width: 3px;
+    border-style: ridge;
+    float: left;
+    background-image: url(images/hth.jpg);
+    background-size: cover;
+}
+
+legend{
+    font-family: cursive;
+    font-weight: bold;
+    }    
+    
+</style>
+    
 </head>
 <body>
 
@@ -61,7 +85,7 @@ session_start();
 <div id="white-space-nav"></div>
     
     
-<div id="side-fix-div-photo"></div>
+<div id="side-fix-div-hth"></div>
     
     <div id="product-desc-outer-contact">
         
@@ -71,7 +95,7 @@ session_start();
 <table id="contact-table">
 <tr>
 <td>Full Name</td>
-<td><input type="text" name="cusername" required="required"></td>
+<td><input type="text" name="cname" required="required"></td>
 </tr>
 <tr>
 <td>E-mail id</td>
@@ -86,7 +110,7 @@ session_start();
 <td><input type ="text" name="csubject" required="required"></td>
 </tr>
 <tr>
-<td colspan="2"><textarea cols="40" rows="15">Type Your Message Here</textarea></td>
+<td colspan="2"><textarea name="ctext" cols="37" rows="15">Type Your Message Here</textarea></td>
 </tr>
 <tr>
 <td colspan="2">

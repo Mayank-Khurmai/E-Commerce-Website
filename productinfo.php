@@ -2,14 +2,24 @@
 session_start();
 ?>
 
-
 <?php
     $mysession = $_SESSION['emailadd'];
-    $db = mysqli_connect("localhost", "root", "", "projectdb");
-    $sql = "SELECT * FROM registertable WHERE emailadd='$mysession'";
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
 ?>
+
+<?php
+    $mysession1 = $_GET['id'];
+    $db1 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql1 = "SELECT * FROM productinfo WHERE pid='$mysession1'";
+    $records1 = mysqli_query($db1, $sql1);
+    $details1 = mysqli_fetch_assoc($records1);
+ 
+?>
+
+
 
 
 <!DOCTYPE html>
@@ -18,6 +28,25 @@ session_start();
 <title>My Shop</title>
 <link rel="stylesheet" href="css2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    
+    #side-fix-div-photo{
+    width: 40%;
+    height: 580px;
+    position: fixed;
+    padding: 10px;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-color: dimgrey;
+    border-width: 3px;
+    border-style: ridge;
+    float: left;
+    background-image: url( <?php echo $details1['pimgadd']; ?> );
+    background-size: cover;
+}
+    </style>
+
 </head>
 <body>
 
@@ -66,21 +95,23 @@ session_start();
     <div id="product-desc-outer">
     
         <div id="product-name-div">
-        <h1>Dennis Men's Shirt</h1>
+            
+            
+        <h1><?php echo $details1['pname'];  ?></h1>
         </div>
         
         <table>
         <tr>
         <td>M.R.P : </td>  
-        <td><strike>Rs. 980</strike></td>
+        <td><strike>Rs. <?php echo $details1['pmrp'];  ?></strike></td>
         </tr>
         <tr>
         <td>Price : </td> 
-        <td><big><b><font color="red">Rs. 670</font></b></big></td>
+        <td><big><b><font color="red">Rs. <?php echo $details1['pprice'];  ?></font></b></big></td>
         </tr>
         <tr>
         <td>You Save : </td>
-        <td><font color="red">Rs. 310</font></td>
+        <td><font color="red">Rs. <?php echo $details1['psave'];  ?></font></td>
         </tr>
         <tr>
         <td></td>
@@ -90,16 +121,16 @@ session_start();
 
         <br>
         
-        <h2 id="avilablity">Currently Available</h2>
+        <h2 id="avilablity"><?php echo $details1['pavailable'];  ?></h2>
         
         <br>
         
         <ul>
-        <li>Available in all the Sizes</li>
-        <li>Pure Cotton Shirt</li>
-        <li>Fashionable Shirt</li>
-        <li>Available in the Black, Blue, Red and Orange Colour</li>
-        <li>Attractive Western Design</li>
+        <li><?php echo $details1['pla'];  ?></li>
+        <li><?php echo $details1['plb'];  ?></li>
+        <li><?php echo $details1['plc'];  ?></li>
+        <li><?php echo $details1['pld'];  ?></li>
+        <li><?php echo $details1['ple'];  ?></li>
         </ul>
         
         <br>
@@ -121,8 +152,13 @@ session_start();
         <h2 id="avilablity">Product Description</h2>
         
         <br>   
-            
-        <p>New Tide Plus with extra power detergent, now with the added power of bar, has been developed to bring you brilliant whiteness on your clothes. It removes dirt even from washed clothes to give you even better cleaning. The enzyme formula in the washing powder helps in washing away the toughest stains on the clothes, thus making them look bright and fresh. Kids often soil their clothes, especially school uniforms, with tough-to-remove stains and dirt. Tide Plus with extra power is a fine detergent powder which dissolves easily in water and quickly generates foam. The superior formulation can remove dirt even from difficult-to-clean areas like collars and cuffs and leaves behind a wonderful fragrance. The product works on both white and colored clothes. Extra power refers to vs previous Tide Plus. Tide, a unit of procter and gamble, is the world’s oldest and most trusted detergent brand and is the market leader in 23 countries around the world.</p>    
+          
+        <p><?php echo $details1['pdesc'];  ?>  </p>
+        <br>
+        <div id="fbtn">
+        <button class="btn">Add To Cart</button>
+        <button class="btn">Proceed to Buy</button>
+        </div>
             
     </div>
     
