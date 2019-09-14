@@ -18,6 +18,13 @@ session_start();
     $details1 = mysqli_fetch_assoc($records1);
 ?>
 
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = mysqli_query($db2, $sql2);
+    $details2 = mysqli_fetch_assoc($records2);
+?>
 
 
 
@@ -171,21 +178,48 @@ session_start();
  function cartadd()
     {
  
-       window.alert("<?php echo 'Added to the Cart'; ?>"); 
-
+       window.alert("<?php $k = $details1['pname']; echo  "$k , Added to the Cart"; ?>");   
+        
+        
 <?php
     $db4 = mysqli_connect("localhost", "root", "", "myshopdb");
     $a = $_SESSION['emailadd'];
     $b = $details1['pname'];
     $c = $details1['pprice'];
-   
-        $sql4 = "INSERT INTO carttable(emailadd, pone, ppone) VALUES('$a', '$b', '$c')";
+    $p = $details2['ppone']; 
+    $q = $details2['pptwo'];
+    $r = $details2['ppthree']; 
+    $s = $details2['ppfour'];
+       if ($p == 0) 
+        {
+        $sql4 = "UPDATE carttable SET pone='$b' , ppone='$c' WHERE emailadd='$a'";
         mysqli_query($db4, $sql4);
+        }
+        else if ($q == 0)
+        {   
+        $sql4 = "UPDATE carttable SET ptwo='$b' , pptwo='$c' WHERE emailadd='$a'";
+        mysqli_query($db4, $sql4);
+        }
+        
+        else if ($r == 0)
+        {   
+        $sql4 = "UPDATE carttable SET pthree='$b' , ppthree='$c' WHERE emailadd='$a'";
+        mysqli_query($db4, $sql4);
+        }
+        else if ($s == 0)
+        {   
+        $sql4 = "UPDATE carttable SET pfour='$b' , ppfour='$c' WHERE emailadd='$a'";
+        mysqli_query($db4, $sql4);
+        }
+        else
+        {   
+        $sql4 = "UPDATE carttable SET pfive='$b' , ppfive='$c' WHERE emailadd='$a'";
+        mysqli_query($db4, $sql4);
+        }
+
+
 ?>
-        
-    
-      
-        
+            
     }
 </script>
     

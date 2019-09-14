@@ -12,7 +12,6 @@ session_start();
 ?>
 
 
-
 <?php
     $mysession2 = $_SESSION['emailadd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
@@ -109,10 +108,10 @@ td{
 </nav>
 <div id="white-space-nav"></div>
     
-    
+
 <div id="side-fix-div-hth"></div>
     
-    <div id="product-desc-outer-contact">
+ <div id="product-desc-outer-contact">
         
 <form method="post" action="contact.php">
 <fieldset id="signup-fieldset">
@@ -128,31 +127,31 @@ td{
     <td> 1</td>
 <td>  <?php echo $details2['pone']; ?>  </td>
 <td>  <?php echo $details2['ppone']; ?>  </td>
-<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+<td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer" onclick="remove1()"></i></td>
 </tr>
 <tr>
     <td>2</td>
 <td>  <?php echo $details2['ptwo']; ?>  </td>
 <td>  <?php echo $details2['pptwo']; ?> </td>
-<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+<td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer" onclick="remove2()"></i></td>
 </tr>
 <tr>
     <td>3</td>
 <td>  <?php echo $details2['pthree']; ?>  </td>
 <td>  <?php echo $details2['ppthree']; ?>  </td>
-<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+<td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer" onclick="remove3()"></i></td>
 </tr>
 <tr>
     <td>4</td>
 <td>  <?php echo $details2['pfour']; ?>  </td>
 <td>  <?php echo $details2['ppfour']; ?>  </td>
-<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+<td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer" onclick="remove4()"></i></td>
 </tr>
 <tr>
     <td>5</td>
 <td>  <?php echo $details2['pfive']; ?>  </td>
 <td>  <?php echo $details2['ppfive']; ?> </td>
-<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+<td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer" onclick="remove5()"></i></td>
 </tr>
 <tr>
     <td colspan="2" id="tdbg1">Total</td>
@@ -180,6 +179,36 @@ td{
     
     
 </div>    
+  
     
+    <script>
+     function remove1()
+        {
+            window.alert("<?php $k = $details2['pone']; echo  "$k , Removed from the Cart"; ?>");
+            window.open("remove1.php", "_self");
+        }
+
+    function remove2()
+        {
+            window.alert("<?php $k = $details2['ptwo']; echo  "$k , Removed from the Cart"; ?>");
+            window.open("remove2.php", "_self");
+        }
+    function remove3()
+        {
+            window.alert("<?php $k = $details2['pthree']; echo  "$k , Removed from the Cart"; ?>");
+            window.open("remove3.php", "_self");          
+        }
+    function remove4()
+        {
+            window.alert("<?php $k = $details2['pfour']; echo  "$k , Removed from the Cart"; ?>");
+            window.open("remove4.php", "_self");
+        }
+        
+    function remove5()
+        {
+            window.alert("<?php $k = $details2['pfive']; echo  "$k , Removed from the Cart"; ?>");
+            window.open("remove5.php", "_self");
+        }
+    </script>
 </body>
 </html>

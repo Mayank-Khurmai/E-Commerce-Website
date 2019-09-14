@@ -17,6 +17,13 @@ if (isset($_POST['registerbtn']))
         $password2 = md5($password);
         $sql = "INSERT INTO logininfo(uname, emailadd, mobileno, location, pass, hashpass) VALUES('$username', '$email', '$mobile', '$state', '$password', '$password2')";
         mysqli_query($db, $sql);
+        
+        
+        $db4 = mysqli_connect("localhost", "root", "", "myshopdb");
+        $sql4 = "INSERT INTO carttable(emailadd) VALUES('$email')";
+        mysqli_query($db4, $sql4);
+        
+        
         include 'flogin.php';
     }
     else
