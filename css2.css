@@ -243,7 +243,11 @@ nav{
     height: 25px;
     margin: 10px;   
 }
-
+#cartno{
+      margin: 0px;
+     padding: 0px;
+    font-size: 90%;
+    }
 #fbtn{
     height: 100px;
     width: 215px;
@@ -259,6 +263,13 @@ nav{
     border-radius: 8%;
 }
 
+#bybtn{
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
 .btn:hover{
     height:40px;
     width: 6opx;
@@ -267,4 +278,5 @@ nav{
     background-color: aqua;
     border-style: inset;
     border-radius: 8%;
+    cursor: pointer;
 }

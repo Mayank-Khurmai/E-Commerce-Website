@@ -69,6 +69,13 @@ nav{
     background-color: dimgrey;
     padding:30px;
 }
+
+#cartno{
+      margin: 0px;
+     padding: 0px;
+    font-size: 90%;
+    }
+
 #right-nav{
     width:50%;
     height:105px;

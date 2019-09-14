@@ -12,6 +12,15 @@ session_start();
 ?>
 
 
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = mysqli_query($db2, $sql2);
+    $details2 = mysqli_fetch_assoc($records2);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,11 +43,27 @@ session_start();
     background-image: url(images/hth.jpg);
     background-size: cover;
 }
-
+    
 legend{
     font-family: cursive;
     font-weight: bold;
     }    
+
+th{
+    text-align: center;
+    }    
+
+td{
+    text-align: center;
+    }    
+
+#tdbg1, th{
+    background-color: yellowgreen;
+    }
+    
+#tdbg2{
+    background-color: yellowgreen;
+    }
     
 </style>
     
@@ -77,7 +102,7 @@ legend{
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+    <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
 </div>
@@ -91,39 +116,68 @@ legend{
         
 <form method="post" action="contact.php">
 <fieldset id="signup-fieldset">
-<legend>Contact Us</legend>
-<table id="contact-table">
+<legend>My Cart</legend>
+<table id="contact-table" border="1" >
 <tr>
-<td>Full Name</td>
-<td><input type="text" name="cname" required="required"></td>
+    <th> Sr. No.</th>
+<th>  <?php echo "Product Name" ?>  </th>
+<th>  <?php echo "Price" ?>  </th>
+<th>  <?php echo "Delete" ?>  </th>
 </tr>
 <tr>
-<td>E-mail id</td>
-<td><input type="email" name="cemail" required="required"></td>
+    <td> 1</td>
+<td>  <?php echo $details2['pone']; ?>  </td>
+<td>  <?php echo $details2['ppone']; ?>  </td>
+<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 </tr>
 <tr>
-<td>Mobile</td>
-<td><input type="tel>" name="cmobile" required="required"></td>
+    <td>2</td>
+<td>  <?php echo $details2['ptwo']; ?>  </td>
+<td>  <?php echo $details2['pptwo']; ?> </td>
+<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 </tr>
 <tr>
-<td>Subject</td>
-<td><input type ="text" name="csubject" required="required"></td>
+    <td>3</td>
+<td>  <?php echo $details2['pthree']; ?>  </td>
+<td>  <?php echo $details2['ppthree']; ?>  </td>
+<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 </tr>
 <tr>
-<td colspan="2"><textarea name="ctext" cols="37" rows="15">Type Your Message Here</textarea></td>
+    <td>4</td>
+<td>  <?php echo $details2['pfour']; ?>  </td>
+<td>  <?php echo $details2['ppfour']; ?>  </td>
+<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 </tr>
 <tr>
-<td colspan="2">
-    <input type="submit" id="submit-btn-cnt" name="registerbtn" value="Submit Query">
+    <td>5</td>
+<td>  <?php echo $details2['pfive']; ?>  </td>
+<td>  <?php echo $details2['ppfive']; ?> </td>
+<td><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+</tr>
+<tr>
+    <td colspan="2" id="tdbg1">Total</td>
+<td colspan="2" id="tdbg2">
+   <?php 
+         $a = $details2['ppone'];
+         $b = $details2['pptwo'];
+         $c = $details2['ppthree'];
+         $d = $details2['ppfour'];
+         $e = $details2['ppfive'];
+         $f = ($a + $b + $c + $d + $e);
+         echo $f;
+    ?>
 </td>
 </tr>
 </table>
+<br>
+    <div id="bybtn">
+        <input type="submit" value="Buy Now" class="btn">
+    </div>
 </fieldset>    
 </form>
 
 </div>
-        
-   
+    
     
 </div>    
     

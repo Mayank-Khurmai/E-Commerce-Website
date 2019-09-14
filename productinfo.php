@@ -16,7 +16,6 @@ session_start();
     $sql1 = "SELECT * FROM productinfo WHERE pid='$mysession1'";
     $records1 = mysqli_query($db1, $sql1);
     $details1 = mysqli_fetch_assoc($records1);
- 
 ?>
 
 
@@ -77,12 +76,12 @@ session_start();
 <div id="menu">
  <ul>
     <li><a href="index.php">Home</a></li>
-    <li><a href="index.php">Accesories</a></li>
-    <li><a href="index.php">Today's Deal</a></li>
-    <li><a href="index.php">Offer Zone</a></li>
+    <li><a href="access.php">Accesories</a></li>
+    <li><a href="offer.php">Offers Zone</a></li>
+    <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
+    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
 </div>
@@ -104,6 +103,10 @@ session_start();
         <tr>
         <td>M.R.P : </td>  
         <td><strike>Rs. <?php echo $details1['pmrp'];  ?></strike></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><?php echo $details1['off'];  ?>% Off</td>
         </tr>
         <tr>
         <td>Price : </td> 
@@ -156,13 +159,35 @@ session_start();
         <p><?php echo $details1['pdesc'];  ?>  </p>
         <br>
         <div id="fbtn">
-        <button class="btn">Add To Cart</button>
+        <button class="btn" onclick="cartadd()">Add To Cart</button>
         <button class="btn">Proceed to Buy</button>
         </div>
             
     </div>
     
 </div>    
+
+<script>
+ function cartadd()
+    {
+ 
+       window.alert("<?php echo 'Added to the Cart'; ?>"); 
+
+<?php
+    $db4 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $a = $_SESSION['emailadd'];
+    $b = $details1['pname'];
+    $c = $details1['pprice'];
+   
+        $sql4 = "INSERT INTO carttable(emailadd, pone, ppone) VALUES('$a', '$b', '$c')";
+        mysqli_query($db4, $sql4);
+?>
+        
+    
+      
+        
+    }
+</script>
     
 </body>
 </html>

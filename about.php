@@ -39,7 +39,11 @@ legend{
     font-family: cursive;
     font-weight: bold;
     }    
-    
+
+p{
+    text-align: justify;
+    font-family: sans-serif;
+    }
 </style>
     
 </head>
@@ -89,37 +93,32 @@ legend{
     
     <div id="product-desc-outer-contact">
         
-<form method="post" action="contact.php">
+
 <fieldset id="signup-fieldset">
-<legend>Contact Us</legend>
-<table id="contact-table">
-<tr>
-<td>Full Name</td>
-<td><input type="text" name="cname" required="required"></td>
-</tr>
-<tr>
-<td>E-mail id</td>
-<td><input type="email" name="cemail" required="required"></td>
-</tr>
-<tr>
-<td>Mobile</td>
-<td><input type="tel>" name="cmobile" required="required"></td>
-</tr>
-<tr>
-<td>Subject</td>
-<td><input type ="text" name="csubject" required="required"></td>
-</tr>
-<tr>
-<td colspan="2"><textarea name="ctext" cols="37" rows="15">Type Your Message Here</textarea></td>
-</tr>
-<tr>
-<td colspan="2">
-    <input type="submit" id="submit-btn-cnt" name="registerbtn" value="Submit Query">
-</td>
-</tr>
-</table>
+<legend>About Us</legend>
+
+    
+<p>
+MyShop is one stop shop of all competitive (Bank, SSC, Railways etc.) based educational needs. The main objective of MyShop is to provide students with a facility of buying online educational products & services related to different competitive exams.
+    <br>
+    The Grahame Gardner MyShop service is available to all customers who would like their staff or students to purchase their specific garments online. This service is particularly popular with Colleges and Universities. The MyShop service is designed to streamline the ordering processes for your organisation
+    <br>
+    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug
+    <br>
+    Run from my home studio in East London and curated and everything-ed by me, the Not The Kind gallery & gift shop is home to a colourful selection of design-led gifts, affordable art, homeware, stationery and Super Cool Accessories For Life. 
+
+I only stock work by artists, designers and indie brands I truly love and enjoy. And so, with colours clashing and patterns splashing all over the place, I handpick items that, for whatever reason, make me feel giddy/excited/hysterical in the hope they might make you feel giddy/excited/hysterical too. 
+
+Every last item featured in the shop has been chosen very specifically - either because it has a story attached or because it has inspired one. I'll share the stories with you. I might write them, I might film them, sing them... And I can't promise there won't come a time when I feel I just have to dance them.  
+
+Not many people can say they started working in retail when they were 2 years old, but I can. Piss-poor customer service makes my toes bunch. That's why I promise to treat you nice. 
+  <br>
+    <b>---<u>THANK YOU</u></b>
+</p>    
+    
+    
 </fieldset>    
-</form>
+
 
 </div>
         
