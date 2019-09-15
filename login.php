@@ -2,7 +2,8 @@
    session_start();
 
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
- 
+ if(!empty(FirstName) && !empty(LastName) && !empty(gender) && !empty(bday) && !empty(Number) && !empty(email) && !empty(psw) && !empty(psw-repeat))
+ {
 $email = $_POST['loginmail'];
 $password = $_POST['loginpassword'];
 
@@ -26,6 +27,11 @@ if (isset($_POST['loginbtn']))
             {
             include 'flogin.php';
             } 
+}
+ }
+else
+{
+    echo "ALL FIELDS ARE REQUIRED. PLEASE CHECK ALL ENTRIES AGAIN." ;
 }
 ?>
 
