@@ -4,7 +4,15 @@ session_start();
 
 
 <?php
+if(! $_SESSION)
+{
+    $mysession= NULL;
+}
+else
+{
     $mysession = $_SESSION['emailadd'];
+}
+    $mysession=$mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
