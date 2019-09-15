@@ -42,7 +42,7 @@ if (isset($_POST['loginbtn']))
         
         if (mysqli_num_rows($result)>0)
         {
-        echo "$email You Have Successfully Logined!";
+        echo "Hey , '$email' , You Have Successfully Logged in!";
         }
     else
         {
