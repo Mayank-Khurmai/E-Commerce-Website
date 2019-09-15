@@ -3,7 +3,15 @@ session_start();
 ?>
 
 <?php
+if(! $_SESSION)
+{
+    $mysession= NULL;
+}
+else
+{
     $mysession = $_SESSION['emailadd'];
+}
+    $mysession=$mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
@@ -19,7 +27,15 @@ session_start();
 ?>
 
 <?php
-    $mysession2 = $_SESSION['emailadd'];
+    if(! $_SESSION)
+    {
+        $mysession2= NULL;
+    }
+    else
+    {
+        $mysession2 = $_SESSION['emailadd'];
+    }
+        $mysession2=$mysession2;
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
@@ -77,7 +93,17 @@ session_start();
     
 <div id="right-nav-upper">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    <?php
+
+    if(! $_SESSION)
+    {
+        echo " Welcome ,Guest ";
+    }
+    else
+    {
+     echo $details['uname']; ?> -- <?php echo $details['emailadd'];
+    }     
+     ?>
 </div>
 
 <div id="menu">
@@ -87,7 +113,18 @@ session_start();
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
-    <li><a href="logout.php">Logout</a></li>
+    <?php
+
+    if(! $_SESSION )
+    {
+        echo '<li><a href="logout.php">Login</a></li>';
+    }
+    else
+    {
+        echo '<li><a href="logout.php">Logout</a></li>';
+    }
+
+    ?>
     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
