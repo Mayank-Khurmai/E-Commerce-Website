@@ -4,7 +4,15 @@ session_start();
 
 
 <?php
+if(! $_SESSION)
+{
+    $mysession= NULL;
+}
+else
+{
     $mysession = $_SESSION['emailadd'];
+}
+    $mysession=$mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
@@ -44,7 +52,17 @@ session_start();
     
 <div id="right-nav-upper">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+   <?php
+
+    if(! $_SESSION)
+    {
+        echo " Welcome ,Guest ";
+    }
+    else
+    {
+     echo $details['uname']; ?> -- <?php echo $details['emailadd'];
+    }     
+     ?>
 </div>
 
 <div id="menu">
