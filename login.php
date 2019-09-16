@@ -3,6 +3,9 @@
 
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
  
+if(!empty(loginmail) && !empty(loginpassword))
+ {
+
 $email = $_POST['loginmail'];
 $password = $_POST['loginpassword'];
 
@@ -26,6 +29,10 @@ if (isset($_POST['loginbtn']))
             {
             include 'flogin.php';
             } 
+}
+   }
+else{
+    echo "ALL FIELDS ARE REQUIRED. PLEASE CHECK ALL ENTRIES AGAIN." ;
 }
 ?>
 
