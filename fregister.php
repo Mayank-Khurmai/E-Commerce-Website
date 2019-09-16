@@ -99,8 +99,12 @@ legend{
 <td><input type="email" name="email" required="required"></td>
 </tr>
 <tr>
+<td>Date of Birth</td>
+<td><input type="date" placeholder="Enter Your DoB here" value="2012-09-16" name="DoB" max="2019-09-15"="required"></td>
+</tr>
+<tr>
 <td>Mobile</td>
-<td><input type="tel>" name="mobile" required="required"></td>
+<td><input type="tel" pattern[0-9]{10} name="mobile" required="required"></td>
 </tr>
 <tr>
 <td>Address</td>
