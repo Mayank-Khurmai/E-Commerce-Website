@@ -23,6 +23,7 @@ else
 
 <!DOCTYPE html>
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
