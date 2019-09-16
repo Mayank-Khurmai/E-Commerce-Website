@@ -71,8 +71,19 @@ else
     <li><a href="access.php">Accesories</a></li>
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
-    <li><a href="fcontact.php">Contact Us</a></li>
-    <li><a href="logout.php">Logout</a></li>
+    <li><a href="fcontact.php">Contact Us</a></li><?php
+
+    if(! $_SESSION )
+    {
+        echo '<li><a href="logout.php">Login</a></li>';
+    }
+    else
+    {
+        echo '<li><a href="logout.php">Logout</a></li>';
+    }
+
+    ?>
+     
      <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
