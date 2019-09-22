@@ -68,9 +68,9 @@ else
 
 <div id="menu">
  <ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="access.php">Accesories</a></li>
-    <li><a href="offer.php">Offers Zone</a></li>
+    <li><a href="index.php">Home Page</a></li>
+    <li><a href="access.php">Accesories Products</a></li>
+    <li><a href="offer.php">Offers Zone Here</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li><?php
 
