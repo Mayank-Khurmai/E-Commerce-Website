@@ -77,7 +77,7 @@ else
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
-<p id="tag-lines">India`s largest Online e-commerce website</p>
+<p id="tag-lines">Website Welcomes You Here</p>
 </header>
 <div id="white-space-header"></div>
     
