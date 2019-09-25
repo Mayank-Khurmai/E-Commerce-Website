@@ -3,9 +3,6 @@
 
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
  
-if(!empty(loginmail) && !empty(loginpassword))
- {
-
 $email = $_POST['loginmail'];
 $password = $_POST['loginpassword'];
 
@@ -19,9 +16,10 @@ if (isset($_POST['loginbtn']))
                   
     
          if (mysqli_num_rows($result)>0)
-           {
-             
-            $_SESSION['emailadd'] = $email;
+           {   
+           $_SESSION['emailadd'] = $email;
+
+    
             include 'index.php';
             
             }
@@ -29,10 +27,6 @@ if (isset($_POST['loginbtn']))
             {
             include 'flogin.php';
             } 
-}
-   }
-else{
-    echo "ALL FIELDS ARE REQUIRED. PLEASE CHECK ALL ENTRIES AGAIN." ;
 }
 ?>
 
@@ -49,7 +43,7 @@ else{
         
         if (mysqli_num_rows($result)>0)
         {
-        echo "Hey , '$email' , You Have Successfully Logged in!";
+        echo "$email You Have Successfully Logined!";
         }
     else
         {

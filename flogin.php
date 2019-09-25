@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>Form</title>
 <style>
@@ -18,7 +17,7 @@ a{
     
 #body-box{
     width: 99%;
-    height: 720px;
+    height: 820px;
     margin: 0 auto;
     border-color: red;
     border-width: 10px;

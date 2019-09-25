@@ -1,17 +1,35 @@
 <?php
-session_start();
+
+if(isset($_SESSION['emailadd']))
+{
+     $_SESSION['emailadd'] = $email;
+}
+else
+{
+    include 'fpage.php';
+}
+
 ?>
 
+
+
 <?php
-if(! $_SESSION)
+error_reporting(0);
+session_start();
+
+if(!isset($_SESSION['emailadd']))
 {
-    $mysession= NULL;
+    
+    $mysession= " Empty";
 }
 else
 {
     $mysession = $_SESSION['emailadd'];
 }
-    $mysession=$mysession;
+
+
+
+    $mysession = $mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
@@ -27,15 +45,7 @@ else
 ?>
 
 <?php
-    if(! $_SESSION)
-    {
-        $mysession2= NULL;
-    }
-    else
-    {
-        $mysession2 = $_SESSION['emailadd'];
-    }
-        $mysession2=$mysession2;
+    $mysession2 = $_SESSION['emailadd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
@@ -46,7 +56,6 @@ else
 
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css2.css">
@@ -77,7 +86,7 @@ else
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
-<p id="tag-lines">Website Welcomes You Here</p>
+<p id="tag-lines">India`s largest Online e-commerce website</p>
 </header>
 <div id="white-space-header"></div>
     
@@ -94,17 +103,7 @@ else
     
 <div id="right-nav-upper">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php
-
-    if(! $_SESSION)
-    {
-        echo " Welcome ,Guest ";
-    }
-    else
-    {
-     echo $details['uname']; ?> -- <?php echo $details['emailadd'];
-    }     
-     ?>
+    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
 </div>
 
 <div id="menu">
@@ -114,18 +113,7 @@ else
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
-    <?php
-
-    if(! $_SESSION )
-    {
-        echo '<li><a href="logout.php">Login</a></li>';
-    }
-    else
-    {
-        echo '<li><a href="logout.php">Logout</a></li>';
-    }
-
-    ?>
+    <li><a href="logout.php">Logout</a></li>
     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
@@ -220,44 +208,18 @@ else
         
         
 <?php
+    if(isset($_SESSION['emailadd']))
+    {
     $db4 = mysqli_connect("localhost", "root", "", "myshopdb");
     $a = $_SESSION['emailadd'];
-    $b = $details1['pname'];
-    $c = $details1['pprice'];
-    $p = $details2['ppone']; 
-    $q = $details2['pptwo'];
-    $r = $details2['ppthree']; 
-    $s = $details2['ppfour'];
-       if ($p == 0) 
-        {
-        $sql4 = "UPDATE carttable SET pone='$b' , ppone='$c' WHERE emailadd='$a'";
-        mysqli_query($db4, $sql4);
-        }
-        else if ($q == 0)
-        {   
-        $sql4 = "UPDATE carttable SET ptwo='$b' , pptwo='$c' WHERE emailadd='$a'";
-        mysqli_query($db4, $sql4);
-        }
-        
-        else if ($r == 0)
-        {   
-        $sql4 = "UPDATE carttable SET pthree='$b' , ppthree='$c' WHERE emailadd='$a'";
-        mysqli_query($db4, $sql4);
-        }
-        else if ($s == 0)
-        {   
-        $sql4 = "UPDATE carttable SET pfour='$b' , ppfour='$c' WHERE emailadd='$a'";
-        mysqli_query($db4, $sql4);
-        }
-        else
-        {   
-        $sql4 = "UPDATE carttable SET pfive='$b' , ppfive='$c' WHERE emailadd='$a'";
-        mysqli_query($db4, $sql4);
-        }
-
-
+    $b = $details1['pid'];
+    $c = $details1['pname'];
+    $d = $details1['pprice'];
+       
+    $sql4 = "INSERT INTO carttable(emailadd, pid, pname, pprice) VALUES('$a', '$b', '$c', '$d')";
+     mysqli_query($db4, $sql4);
+    }
 ?>
-            
     }
 </script>
     

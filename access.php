@@ -1,19 +1,21 @@
 <?php
+error_reporting(0);
 session_start();
-?>
 
-
-<?php
-if(! $_SESSION)
+if(!isset($_SESSION['emailadd']))
 {
-    $mysession= NULL;
+    
+    $mysession= " Empty";
 }
 else
 {
     $mysession = $_SESSION['emailadd'];
 }
-    $mysession=$mysession;
-    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+
+
+
+    $mysession = $mysession;
+   $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
@@ -23,7 +25,6 @@ else
 
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
@@ -52,17 +53,7 @@ else
     
 <div id="right-nav-upper">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php
-
-    if(! $_SESSION)
-    {
-        echo " Welcome ,Guest ";
-    }
-    else
-    {
-     echo $details['uname']; ?> -- <?php echo $details['emailadd'];
-    }     
-     ?>
+    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
 </div>
 
 <div id="menu">
@@ -72,20 +63,7 @@ else
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
-    <?php
-
-    if(! $_SESSION )
-    {
-        echo '<li><a href="logout.php">Login</a></li>';
-    }
-    else
-    {
-        echo '<li><a href="logout.php">Logout</a></li>';
-    }
-
-    ?>
-    
-   
+    <li><a href="logout.php">Logout</a></li>
     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
@@ -154,138 +132,40 @@ else
 <div id="side-right-div">
 
     
-    
-<div id="cat-c">
-<a href="productinfo.php?id=c1">
-    <div class="size">
-    <div class="s-img" id="cat-img-c1"></div>
-    <?php echo "<span><center><small>Kids Vockey-Tockey <br> 35% Off </small><br> Rs. <b><big>1000</big></b> | <strike><small>Rs. 1500</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=c2">
-    <div class="size">
-    <div class="s-img" id="cat-img-c2"></div>
-    <?php echo "<span><center><small> Hfid Speaker <br> 20% Off </small><br> Rs. <b><big>1750</big></b> | <strike><small>Rs. 2180</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=c3">
-    <div class="size">
-    <div class="s-img" id="cat-img-c3"></div>
-    <?php echo "<span><center><small>2-USB Speaker <br> 35% Off </small><br> Rs. <b><big>640</big></b> | <strike><small>Rs. 970</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=c4">
-    <div class="size">
-    <div class="s-img" id="cat-img-c4"></div>
-    <?php echo "<span><center><small>Resberi Pi <br> 14% Off </small><br> Rs. <b><big>1200</big></b> | <strike><small>Rs. 1380</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=c5">
-    <div class="size">
-    <div class="s-img" id="cat-img-c5"></div>
-    <?php echo "<span><center><small>Mobile Stand <br> 53% Off </small><br> Rs. <b><big>230</big></b> | <strike><small>Rs. 480</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=c6">
-    <div class="size">
-    <div class="s-img" id="cat-img-c6"></div>
-    <?php echo "<span><center><small>USB Hardisk <br> 10% Off </small><br> Rs. <b><big>1770</big></b> | <strike><small>Rs. 1980</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-</div>    
 
     
+<div id="side-right-div-border">
     
-<div id="cat-d">
-<a href="productinfo.php?id=d1">
-    <div class="size">
-    <div class="s-img" id="cat-img-d1"></div>
-    <?php echo "<span><center><small>Android Galaxy <br> 15% Off </small><br> Rs. <b><big>16700</big></b> | <strike><small> 19800</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=d2">
-    <div class="size">
-    <div class="s-img" id="cat-img-d2"></div>
-    <?php echo "<span><center><small>Touchscreen Android <br> 8% Off </small><br> Rs. <b><big>12700</big></b> | <strike><small> 13800</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=d3">
-    <div class="size">
-    <div class="s-img" id="cat-img-d3"></div>
-    <?php echo "<span><center><small>Samsung Galaxy <br> 10% Off </small><br> Rs. <b><big>26700</big></b> | <strike><small> 28800</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=d4">
-    <div class="size">
-    <div class="s-img" id="cat-img-d4"></div>
-    <?php echo "<span><center><small>Vivo Triple V9 <br> 15% Off </small><br> Rs. <b><big>18500</big></b> | <strike><small> 21900</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=d5">
-    <div class="size">
-    <div class="s-img" id="cat-img-d5"></div>
-    <?php echo "<span><center><small>Motorola Green <br> 5% Off </small><br> Rs. <b><big>36500</big></b> | <strike><small> 37900</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=d6">
-    <div class="size">
-    <div class="s-img" id="cat-img-d6"></div>
-    <?php echo "<span><center><small>Panasonic Multi <br> 20% Off </small><br> Rs. <b><big>12700</big></b> | <strike><small> 15800</small></strike><center></span>"; ?>
-    </div> 
-</a>  
+    
+
+    <?php    
+        
+        $db = mysqli_connect("localhost", "root", "", "myshopdb");
+        $sql = "SELECT * FROM productinfo";
+        $records = mysqli_query($db, $sql);
+        
+    
+     while($row = $records->fetch_assoc()) 
+             {
+        
+        echo " <a href='productinfo.php?id=".$row['pid']." '><div id='all-size'> 
+        
+                        <div id='all-img' style='background:url("  .$row['pimgadd'].  "); background-size:cover;' ></div>
+                
+                        <span><center><small>" 
+                        .$row["pname"]. "<br>" .$row["off"]. "% Off </small> 
+                        <br> Rs. <b><big>" .$row["pprice"]. "</big></b> | <strike><small>Rs." .$row["pmrp"]. "</small></strike><center></span>
+               </div></a>
+        "; 
+     }
+    
+        ?>
+  
 </div>
-
-    
-    
-    
-    
  
     
     
 
- 
-    
-     
-    
-<div id="cat-k">
-<a href="productinfo.php?id=k1">
-    <div class="size">
-    <div class="s-img" id="cat-img-k1"></div>
-    <?php echo "<span><center><small>Boss Speakers <br> 5% Off </small><br> Rs. <b><big>2300</big></b> | <strike><small>Rs. 2400</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=k2">
-    <div class="size">
-    <div class="s-img" id="cat-img-k2"></div>
-    <?php echo "<span><center><small>Home Theatre <br> 10% Off </small><br> Rs. <b><big>1350</big></b> | <strike><small>Rs. 1500</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=k3">
-    <div class="size">
-    <div class="s-img" id="cat-img-k3"></div>
-    <?php echo "<span><center><small>Amazon Alexa <br> 17% Off </small><br> Rs. <b><big>6000</big></b> | <strike><small>Rs. 7200</small></strike><center></span>"; ?>
-    </div> 
-</a> 
-<a href="productinfo.php?id=k4">
-    <div class="size">
-    <div class="s-img" id="cat-img-k4"></div>
-    <?php echo "<span><center><small>Sony Speakers<br> 10% Off </small><br> Rs. <b><big>2500</big></b> | <strike><small>Rs. 2800</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=k5">
-    <div class="size">
-    <div class="s-img" id="cat-img-k5"></div>
-    <?php echo "<span><center><small>Kingston Speaker <br> 15% Off </small><br> Rs. <b><big>1200</big></b> | <strike><small>Rs. 1380</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-<a href="productinfo.php?id=k6">
-    <div class="size">
-    <div class="s-img" id="cat-img-k6"></div>
-    <?php echo "<span><center><small>Home Speakers <br> 15% Off </small><br> Rs. <b><big>1000</big></b> | <strike><small>Rs. 1150</small></strike><center></span>"; ?>
-    </div> 
-</a>  
-</div>     
-    
 </div>
     
 </div>    

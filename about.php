@@ -1,18 +1,20 @@
 <?php
+error_reporting(0);
 session_start();
-?>
 
-
-<?php
-if(! $_SESSION)
+if(!isset($_SESSION['emailadd']))
 {
-    $mysession= NULL;
+    
+    $mysession= " Empty";
 }
 else
 {
     $mysession = $_SESSION['emailadd'];
 }
-    $mysession=$mysession;
+
+
+
+    $mysession = $mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
@@ -22,7 +24,6 @@ else
 
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css2.css">
@@ -79,17 +80,7 @@ p{
     
 <div id="right-nav-upper">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php
-
-    if(! $_SESSION)
-    {
-        echo " Welcome ,Guest ";
-    }
-    else
-    {
-     echo $details['uname']; ?> -- <?php echo $details['emailadd'];
-    }     
-     ?>
+    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
 </div>
 
 <div id="menu">
@@ -99,18 +90,7 @@ p{
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
-    <?php
-
-    if(! $_SESSION )
-    {
-        echo '<li><a href="logout.php">Login</a></li>';
-    }
-    else
-    {
-        echo '<li><a href="logout.php">Logout</a></li>';
-    }
-
-    ?>
+    <li><a href="logout.php">Logout</a></li>
     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>

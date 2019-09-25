@@ -256,7 +256,7 @@ nav{
 
 .btn{
     height:40px;
-    width: 6opx;
+    width: 60px;
     font-family: cursive;
     background-color: aqua;
     border-style: inset;
@@ -272,7 +272,7 @@ nav{
 
 .btn:hover{
     height:40px;
-    width: 6opx;
+    width: 60px;
     font-family: cursive;
     font-weight: bold;
     background-color: aqua;
