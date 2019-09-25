@@ -92,7 +92,7 @@ legend{
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
-<p id="tag-lines">India`s largest Online e-commerce website</p>
+<p id="tag-lines">Welcome TO Our Largest Website</p>
 </header>
 <div id="white-space-header"></div>
     
