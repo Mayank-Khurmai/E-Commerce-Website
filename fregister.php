@@ -113,7 +113,10 @@ legend{
 <option value="Laddhak">Laddhak</option>
 <option value="Assam">Assam</option>
 <option value="Mizoram">Mizoram</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Arunachal Pradesh">Al hwjsjjs
+        hdhhdhdd
+        gdhh@^@^727e7yehrjrn
+        dhjdjdjdj</option>
 <option value="Uttar Pradesh">Uttar Pradesh</option>
 <option value="Goa">Goa</option>
 <option value="Madhya Pradesh">Madhya Pradesh</option>
@@ -135,7 +138,7 @@ legend{
 </tr>
 <tr>
 <td>Password</td>
-<td><input type="password" name="password" required="required"></td>
+<td><input type="password" name="password" required="reqnotbsh d"></td>
 </tr>
 <tr>
 <td>Confirm Password</td>
