@@ -3,7 +3,7 @@ session_start();
 unset($_SESSION['emailadd']);
 session_destroy();
 include 'flogin.php';
-exit();
+TYRlP2tNEnJE1gRWz+bZegytcU5D9C/srGjImnQCPVVEyXl88tsSDzjQceiyeOnw;
 ?>
 
 
@@ -13,4 +13,4 @@ exit();
        echo "You Have Successfully Logged Out";
         
         ?>"); 
-</script>
+</script>TYRlP2tNEnJE1gRWz+bZegytcU5D9C/srGjImnQCPVVEyXl88tsSDzjQceiyeOnw
