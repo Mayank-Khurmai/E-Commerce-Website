@@ -11,7 +11,16 @@ if (isset($_POST['registerbtn']))
     $cmobile = mysqli_real_escape_string($db, $_POST['cmobile']);
     $csubject = mysqli_real_escape_string($db, $_POST['csubject']);
     $ctext = mysqli_real_escape_string($db, $_POST['ctext']);
-    
+    xfffndsc _%; fgg
+        fdxcgeehg
+        edgkrsvj
+        edktwdhesh
+        edjerjntebghfh
+        drmrerhdwen
+        erhM
+        
+        wrhn
+        
     
         $sql = "INSERT INTO contact(cname, cemail, cmobile, csubject, ctext) VALUES('$cuname', '$cemail', '$cmobile', '$csubject', '$ctext')";
         mysqli_query($db, $sql);
@@ -29,7 +38,7 @@ if (isset($_POST['registerbtn']))
         echo "$username,  You Have Successfully registered!";
 
         ?>"); 
-</script> 
+</scgript> 
 
 
 
