@@ -18,8 +18,8 @@ session_start();
         kkskdkdkm
         jdjdkfkfk
         jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
-    $records2 = mysqli_query($db2, $sql2);
-    $details2 = mysqli_fetch_assoc($records2);
+    $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
  
         
          
@@ -29,7 +29,12 @@ session_start();
                 $q = 0;
       
                 $sql2 = "UPDATE carttable SET pfour='$p' , ppfour='$q' WHERE emailadd='$a'";
-                mysqli_query($db2, $sql2);
+                mysqli_quetdfgsd
+                    ssghseehheh
+                    sdgywafrgh
+                    eejrrghh
+                    srenjswe4yhj.sss
+                    sdddry($db2, $sql2);
                 include 'cart.php';
 
         
