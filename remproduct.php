@@ -5,7 +5,41 @@ session_start();
 
 <?php
     $mysession = $_SESSION['emailadd'];
-    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $db = id="tag-lines">India`s largest Online e-commerce website</p>
+</header>
+<div id="white-space-header"></div>
+    
+    
+<nav>
+<form>
+<input type="search" name="search" id="search-box" placeholder="Search this site"/>
+<input type="submit" value="Search Now" id="search-btn"/>
+</form>
+<table id="nav-table">
+<tr>
+<td id="nav-box"><a href="#">Home</a></td>
+<td id="nav-box"><a href="#">Accesories</a></td>
+<td id="nav-box"><a href="#">Today's Deal</a></td>
+<td id="nav-box"><a href="#">Offer Zone</a></td>
+<td id="nav-box"><a href="#">Contact Us</a></td>
+<td id="nav-box-cart"><a href="#">Cart</a></td>
+</tr>
+</table>
+</nav>
+<div id="white-space-nav"></div>
+    
+    
+<div id="side-fix-div">
+
+<div id="search-by-category-div">
+<h1 id="search-by-category">Search By Category</h1>    
+</div> 
+    
+
+<div id="search-by-category-div2"> 
+
+<table width="100%" height="300px">
+<tr>", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
@@ -27,7 +61,17 @@ session_start();
 #btn{
     width: 50%;
     height: auto;
-    margin: 0 auto;
+    marghhzhwhshbs
+    ansnnwnsnshbebwhjjsbs
+   anenwnsjjwhwjbebeneje
+   nsbwjwnmejwjejejne
+   jsnnnwnjsjwjjwhwhhenww
+   jsjjekwksiisjsjsjmskwkekje
+   nsnmemskjwjwjjwjwjwjejjeje
+   jjwjwjjwjwjjwjwjwjwjjsjsjs
+   msjjjejwuwuushbejejjejjejwn
+   mwjjejjeiejb3bbIeuu3hejnwnwm
+   nsjwnwjjwjwhbwja8uhebebin: 0 auto;
     } 
 .btn-size{
     width: 100%;
