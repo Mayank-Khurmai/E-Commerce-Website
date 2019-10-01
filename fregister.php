@@ -13,28 +13,11 @@ body{
 a{
     text-decoration: none;
     color: darkslateblue;
-    } bsbnss
-        bsbbsnamsUwujansneje
-        nanwnwIuzhsnekwi
-        jahbenwnsnsmsm
-        nsjsnjeuahsnnsks
-        hwbnwnuUenkw8whshwhwnw
-        jwhn
-        wjjwjwjwnwmwmJwusn
-        wnnwjjwjwbwkwwkjwns
-        
-        jwjwjwjwuwhhwjw
-        jsjsjnsmwmwmjwhwiieu3
-        mwjwjejjejejejjejwjwjejej
-        wjjejejejejejjeueue
-        mejjejsuuejehsjsbnsjsjejje
-        jjejjensjsnnejnwnwksiujjjw
-        jwjjenjsjjenennenennnsnnejenneje
-        
+    }   
     
 #body-box{
     width: 99%;
-    height: 720px;
+    height: 820px;
     margin: 0 auto;
     border-color: red;
     border-width: 10px;
@@ -80,6 +63,10 @@ td{
     font-size: 17px;
     font-family: inherit;
     }
+#select{
+    font-size: 17px;
+    font-family: inherit;
+    }
 legend{
     font-family: cursive;
     font-size: 25px;
@@ -119,10 +106,16 @@ legend{
 <td><input type="tel>" name="mobile" required="required"></td>
 </tr>
 <tr>
+<td>
+Gender : 
+</td>
+<td><input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female</td>
+</tr>
+<tr>
 <td>Address</td>
 <td>
-<select name="state">
-<option value="all">-------Select State-------</option>
+<select name="state" id="state">
+<option value="None">---------Select State--------</option>
 <option value="Delhi">Delhi</option>
 <option value="Punjab">Punjab</option>
 <option value="Rajasthan">Rajasthan</option>
@@ -130,10 +123,7 @@ legend{
 <option value="Laddhak">Laddhak</option>
 <option value="Assam">Assam</option>
 <option value="Mizoram">Mizoram</option>
-<option value="Arunachal Pradesh">Al hwjsjjs
-        hdhhdhdd
-        gdhh@^@^727e7yehrjrn
-        dhjdjdjdj</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
 <option value="Uttar Pradesh">Uttar Pradesh</option>
 <option value="Goa">Goa</option>
 <option value="Madhya Pradesh">Madhya Pradesh</option>
@@ -155,7 +145,7 @@ legend{
 </tr>
 <tr>
 <td>Password</td>
-<td><input type="password" name="password" required="reqnotbsh d"></td>
+<td><input type="password" name="password" required="required"></td>
 </tr>
 <tr>
 <td>Confirm Password</td>

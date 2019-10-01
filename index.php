@@ -12,8 +12,6 @@ else
     $mysession = $_SESSION['emailadd'];
 }
 
-
-
     $mysession = $mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
@@ -22,20 +20,51 @@ else
 ?>
 
 
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+
+#right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}
+#right-nav-upper2{
+    width:100%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    display: none;
+    margin-top: -32px;
+    margin-left: -9px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#right-nav-upper1:hover #right-nav-upper2{
+   display: block;
+    background-color: darksalmon;
+    }
+#login-as{
+     font-size: 20px;
+    margin-left: 28%;
+    margin-top: 6%;
+    }  
+</style>
 </head>
 <body>
 
@@ -50,19 +79,27 @@ else
     
 <nav>
 <div id="left-nav"><form>
-<input type="search" name="search" onkeyup="searchfn()" id="search-box" placeholder="Search the Products"/>
-<input type="submit" value="Search Now" id="search-btn"/>
+<input type="search" name="search" id="search-box" placeholder="Search the Products"/>
+<input type="submit" value="Search Now" onclick="searchfn();" id="search-btn"/>
 </form>
 </div>
     
 <div id="right-nav"> 
 
-    
-<div id="right-nav-upper">
+   
+<div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
     <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    
+<div id="right-nav-upper2">
+    <span id="login-as"><a href="floginadmin.php">Login as Admin</a></span>
+</div>
 </div>
 
+
+  
+    
+    
 <div id="menu">
  <ul>
     <li><a href="index.php">Home</a></li>
@@ -71,7 +108,7 @@ else
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
  </ul>
 </div>
 </div>
@@ -171,16 +208,33 @@ else
  
     
 <script>
-   
-function searchfn()
+    
+    <?php    
+    $mysession2 = $_SESSION['emailadd'];
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records = mysqli_query($db, $sql);
+    $x = 1; 
+    while($row = $records->fetch_assoc()) 
+        {
+          $x = $x + 1;
+         }
+     
+        ?>
+    var a = document.getElementById("cartno");
+    a.innerHTML = <?php $x = $x-1; echo $x ?>;
+    
+    
+    
+    
+    function searchfn()
     {
-        var input = document.getElementById("search-box");
-        var filter = input.value.toUpperCase();
-        var bbox = document.getElementsByClassName("size");
-        
-        for( i=0; )
+        var t = document.getElementById("search-box").value;
+        window.alert(t);
     }
-
+    
+    
 </script>
+
 </body>
 </html>
