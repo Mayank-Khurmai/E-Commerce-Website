@@ -30,38 +30,7 @@ session_start();
     height: auto;
     margin: 0 auto;
     } 
-.btn-size{
-    width: 100%;
-    height: 100px;
-    margin: 5px;
-    border-width: 2px;
-    background-color: aquamarine;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 15px;
-    border-style: outset;
-    }
-.btn-size:hover{
-    width: 100%;
-    height: 100px;
-    margin: 5px;
-    border-width: 2px;
-    background-color: aquamarine;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 17px;
-    border-style: inherit;
-    cursor: pointer;
-    }
-#menu ul li a:hover{
-    background-color: brown;
-    border-radius: 6px;
-    cursor: not-allowed;
-}
-#an-div{
-    width: 100%;
-    height: 700px;
-    }
+   
 #right-nav-upper1{
     width:48%;
     height:50px;
@@ -69,7 +38,7 @@ session_start();
     float: right;
     margin-top: 2px;
     font-size: 17px;
-    margin-right: 10px; 
+    margin-right: 10px;
     border-radius: 10px;
     position: relative;
     background-color: darkgray;
@@ -88,7 +57,11 @@ session_start();
     background-color: darkgray;
     padding: 10px;
 }
-
+#menu ul li a:hover{
+    background-color: brown;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
 #right-nav-upper1:hover #right-nav-upper2{
    display: block;
     background-color: darksalmon;
@@ -98,15 +71,65 @@ session_start();
     margin-left: 28%;
     margin-top: 6%;
     }  
+.btn-size{
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    border-width: 2px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    border-style: outset;
+    }
+ legend{
+    font-family: cursive;
+    font-weight: bold;
+    }   
+    
+#add-field{
+    width:80%;
+    height: 680px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2%;
+    border: 2px solid black;
+    }    
+    
+    
+.btn-size:hover{
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    border-width: 2px;
+    background-color: aquamarine;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    border-style: inherit;
+    cursor: pointer;
+    }
+#an-div{
+    width: 100%;
+    height: auto;
+    }
 #animated zoomIn infinite{
     margin: 0 auto;
     font-size: 50px;
     }
-
-#fafa{
-    font-size: 350px;
-    margin-left: 40%;
-    margin-top: 10%;
+td{
+    height: 40px;
+    }
+td{
+    height: 40px;
+    }
+table{
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    }
+th{
+    background-color: greenyellow;
     }
 </style>
 </head>
@@ -186,8 +209,30 @@ session_start();
 <div id="side-right-div">     
     <div id="an-div">
         
-        <i class="fa fa-user" id="fafa"></i>
-
+        
+    <fieldset id="add-field">
+        <legend>Delete User</legend>      
+    <?php    
+        
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM logininfo";
+    $records = mysqli_query($db, $sql);
+        
+        echo "<table border='2' width='70%'>";
+        echo "<tr> <th>Sr. No.</th> <th> User Name </th><th>E-mail</th>  <th>Mobile Number</th>   <th>Delete User</th>  ";
+        $x = 1; 
+             while($row = $records->fetch_assoc()) 
+             {
+                 $z = $row["emailadd"];
+                echo   "<tr> <td align='center'>" .$x.  "</td> <td align='center'>" .$row["uname"].  "</td> <td align='center'>" .$row["emailadd"].  "</td> <td align='center'>" .$row["mobileno"].  "</td><td align='center'><a href="."deleteuserphp.php?id="."$z"."><i class='fa fa-trash' aria-hidden='true'></i></a></td> </tr>";
+                 $x = $x + 1;
+             }
+        
+        echo "</table>";
+        
+        ?>
+        
+        </fieldset>    
         </div>
 </div>
     

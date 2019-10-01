@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 ?>
 
@@ -40,6 +41,47 @@ session_start();
     font-size: 15px;
     border-style: outset;
     }
+#right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}
+#menu ul li a:hover{
+    background-color: brown;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+#right-nav-upper2{
+    width:100%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    display: none;
+    margin-top: -32px;
+    margin-left: -9px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#right-nav-upper1:hover #right-nav-upper2{
+   display: block;
+    background-color: darksalmon;
+    }
+#login-as{
+     font-size: 20px;
+    margin-left: 28%;
+    margin-top: 6%;
+    }  
 .btn-size:hover{
     width: 100%;
     height: 100px;
@@ -64,10 +106,13 @@ td{
     height: 40px;
     }
 #add-field{
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 10px;
     padding: 2%;
+    padding-right: 15%;
+    padding-left: 15%;
+    border: 2px solid black;
     }    
 table{
     width: 100%;
@@ -92,7 +137,7 @@ legend{
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
-<p id="tag-lines">Welcome TO Our Largest Website</p>
+<p id="tag-lines">India`s largest Online e-commerce website</p>
 </header>
 <div id="white-space-header"></div>
     
@@ -107,20 +152,24 @@ legend{
 <div id="right-nav"> 
 
     
-<div id="right-nav-upper">
+<div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?> -- <?php echo "[Admin]"; ?>
+    
+<div id="right-nav-upper2">
+    <span id="login-as"><a href="index.php">Logout as Admin</a></span>
+</div>
 </div>
 
 <div id="menu">
  <ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="access.php">Accesories</a></li>
-    <li><a href="offer.php">Offers Zone</a></li>
-    <li><a href="about.php">About Us</a></li>
-    <li><a href="fcontact.php">Contact Us</a></li>
-    <li><a href="logout.php">Logout</a></li>
-     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Accesories</a></li>
+    <li><a href="#">Offers Zone</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Logout</a></li>
+     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
  </ul>
 </div>
 </div>
@@ -131,14 +180,14 @@ legend{
 <div id="side-fix-div">
 
 <div id="search-by-category-div">
-<h1 id="search-by-category" class="animated zoomIn infinite">Welcome to C-Panel</h1>
+<a href="adminhome.php"><h1 id="search-by-category" class="animated zoomIn infinite">Welcome to C-Panel</h1></a>
 
 <div id="btn">
 
 <a href="addproduct.php"><button class="btn-size">Add Product</button></a>
 <a href="remproduct.php"><button class="btn-size">Remove Product</button></a>
 <a href="updateproduct.php"><button class="btn-size">Update Product</button></a>
-<a href="deleteproduct.php"><button class="btn-size">Remove User</button></a>
+<a href="deleteuser.php"><button class="btn-size">Remove User</button></a>
 
     
 </div>
@@ -157,7 +206,7 @@ legend{
 
 <div id="side-right-div">     
     <div id="an-div">
-        <form method="post" action="productadd.php">   
+        <form method="post" action="productadd.php" enctype="multipart/form-data">   
         <fieldset id="add-field">
         <legend>Add Product</legend>
         <table>
@@ -212,11 +261,11 @@ legend{
         </tr>
         <tr>
         <td>Product Description</td>
-        <td><textarea rows="10" cols="43" placeholder="Write Product Description Here!" name="pdesc"></textarea></td>
+        <td><textarea rows="10" cols="49" placeholder="Write Product Description Here!" name="pdesc"></textarea></td>
         </tr>
         <tr>
         <td>Upload Image</td>
-        <td><input type="file" accept="image/jpeg" name="pimgadd"></td>
+        <td><input type="file"  name="pimgadd"></td>
         </tr>
         <tr>
         <td><input type="submit" name="addbtn" value="Add Now"></td>

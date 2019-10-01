@@ -30,6 +30,43 @@ else
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+
+#right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}
+#right-nav-upper2{
+    width:100%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    display: none;
+    margin-top: -32px;
+    margin-left: -9px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#right-nav-upper1:hover #right-nav-upper2{
+   display: block;
+    background-color: darksalmon;
+    }
+#login-as{
+     font-size: 20px;
+    margin-left: 28%;
+    margin-top: 6%;
+    }  
 #side-fix-div-hth{
     width: 40%;
     height: 580px;
@@ -78,9 +115,13 @@ p{
 <div id="right-nav"> 
 
     
-<div id="right-nav-upper">
+<div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
     <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    
+<div id="right-nav-upper2">
+    <span id="login-as"><a href="floginadmin.php">Login as Admin</a></span>
+</div>
 </div>
 
 <div id="menu">
@@ -91,7 +132,7 @@ p{
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
  </ul>
 </div>
 </div>
@@ -115,7 +156,7 @@ MyShop is one stop shop of all competitive (Bank, SSC, Railways etc.) based educ
     <br>
     Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug
     <br>
-    Run from my home studio in East London and curated and everything-ed by me, the Not The Kind gallery & gift shop is home to a colourful selection of design-led gifts, affordable art, homeware, stationery and Super Cool Accessories For Life. 
+    Run from my home studio in East London and curated and everything-ed by me, the Not The Kind gallery &amp; gift shop is home to a colourful selection of design-led gifts, affordable art, homeware, stationery and Super Cool Accessories For Life. 
 
 I only stock work by artists, designers and indie brands I truly love and enjoy. And so, with colours clashing and patterns splashing all over the place, I handpick items that, for whatever reason, make me feel giddy/excited/hysterical in the hope they might make you feel giddy/excited/hysterical too. 
 
@@ -135,6 +176,25 @@ Not many people can say they started working in retail when they were 2 years ol
    
     
 </div>    
+   
+    <script>
+    
+    <?php    
+    $mysession2 = $_SESSION['emailadd'];
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records = mysqli_query($db, $sql);
+    $x = 1; 
+    while($row = $records->fetch_assoc()) 
+        {
+          $x = $x + 1;
+         }
+     
+        ?>
+    var a = document.getElementById("cartno");
+    a.innerHTML = <?php $x = $x-1; echo $x ?>;
+    
+</script>
     
 </body>
 </html>

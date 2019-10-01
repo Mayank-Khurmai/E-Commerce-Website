@@ -244,39 +244,15 @@ nav{
     margin: 10px;   
 }
 #cartno{
-      margin: 0px;
+    margin: 0px;
+    margin-left: 2%;
      padding: 0px;
     font-size: 90%;
     }
-#fbtn{
-    height: 100px;
-    width: 215px;
-    margin: 0 auto;    
-}
-
-.btn{
-    height:40px;
-    width: 60px;
-    font-family: cursive;
-    background-color: aqua;
-    border-style: inset;
-    border-radius: 8%;
-}
 
 #bybtn{
     width: 10%;
     height: auto;
     margin: 0 auto;
-    cursor: pointer;
-}
-
-.btn:hover{
-    height:40px;
-    width: 60px;
-    font-family: cursive;
-    font-weight: bold;
-    background-color: aqua;
-    border-style: inset;
-    border-radius: 8%;
     cursor: pointer;
 }

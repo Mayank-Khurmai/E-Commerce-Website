@@ -29,6 +29,45 @@ else
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+#right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}
+#right-nav-upper2{
+    width:100%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    display: none;
+    margin-top: -32px;
+    margin-left: -9px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#right-nav-upper1:hover #right-nav-upper2{
+   display: block;
+    background-color: darksalmon;
+    }
+#login-as{
+     font-size: 20px;
+    margin-left: 28%;
+    margin-top: 6%;
+    }  
+</style>
 </head>
 <body>
 
@@ -51,9 +90,13 @@ else
 <div id="right-nav"> 
 
     
-<div id="right-nav-upper">
+<div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
     <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    
+<div id="right-nav-upper2">
+    <span id="login-as"><a href="floginadmin.php">Login as Admin</a></span>
+</div>
 </div>
 
 <div id="menu">
@@ -64,7 +107,7 @@ else
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
  </ul>
 </div>
 </div>
@@ -147,7 +190,8 @@ else
     
      while($row = $records->fetch_assoc()) 
              {
-        
+       if($row["pprice"] > 1000 )
+        { 
         echo " <a href='productinfo.php?id=".$row['pid']." '><div id='all-size'> 
         
                         <div id='all-img' style='background:url("  .$row['pimgadd'].  "); background-size:cover;' ></div>
@@ -156,7 +200,8 @@ else
                         .$row["pname"]. "<br>" .$row["off"]. "% Off </small> 
                         <br> Rs. <b><big>" .$row["pprice"]. "</big></b> | <strike><small>Rs." .$row["pmrp"]. "</small></strike><center></span>
                </div></a>
-        "; 
+        ";
+       }
      }
     
         ?>
@@ -170,6 +215,23 @@ else
     
 </div>    
     
- 
+ <script>
+    
+    <?php    
+    $mysession2 = $_SESSION['emailadd'];
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records = mysqli_query($db, $sql);
+    $x = 1; 
+    while($row = $records->fetch_assoc()) 
+        {
+          $x = $x + 1;
+         }
+     
+        ?>
+    var a = document.getElementById("cartno");
+    a.innerHTML = <?php $x = $x-1; echo $x ?>;
+    
+</script>
 </body>
 </html>

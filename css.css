@@ -9,41 +9,7 @@ body{
     padding: 0px;
 }
 
-a{id="tag-lines">India`s largest Online e-commerce website</p>
-</header>
-<div id="white-space-header"></div>
-    
-    
-<nav>
-<form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
-<table id="nav-table">
-<tr>
-<td id="nav-box"><a href="#">Home</a></td>
-<td id="nav-box"><a href="#">Accesories</a></td>
-<td id="nav-box"><a href="#">Today's Deal</a></td>
-<td id="nav-box"><a href="#">Offer Zone</a></td>
-<td id="nav-box"><a href="#">Contact Us</a></td>
-<td id="nav-box-cart"><a href="#">Cart</a></td>
-</tr>
-</table>
-</nav>
-<div id="white-space-nav"></div>
-    
-    
-<div id="side-fix-div">
-
-<div id="search-by-category-div">
-<h1 id="search-by-category">Search By Category</h1>    
-</div> 
-    
-
-<div id="search-by-category-div2"> 
-
-<table width="100%" height="300px">
-<tr>
+a{
     color:#323232;
     text-decoration:none;
     font-family:sans-serif;
@@ -96,13 +62,7 @@ nav{
 
 #left-nav{
     width:50%;
-    heightggwhshhshwh
-	
-	
-	
-	
-	
-	:105px;
+    height:105px;
     float: left;
     z-index: 1;
     box-sizing:border-box;
@@ -132,6 +92,7 @@ nav{
     float: right;
     margin-top: 2px;
     margin-right: 10px;
+    border: 1px solid red;
     border-radius: 10px;
     background-color: darkgray;
     padding: 7px;
@@ -193,7 +154,7 @@ nav{
 }
 
 #menu ul{
-    display:block;
+    display: block;
     list-style:none;
     padding:9px 0 0 10px;
     margin:0px;
