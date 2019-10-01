@@ -1,19 +1,4 @@
 <?php
-
-if(isset($_SESSION['emailadd']))
-{
-     $_SESSION['emailadd'] = $email;
-}
-else
-{
-    include 'fpage.php';
-}
-
-?>
-
-
-
-<?php
 error_reporting(0);
 session_start();
 
@@ -62,8 +47,43 @@ else
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-    
-    #side-fix-div-photo{
+#right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}
+#right-nav-upper2{
+    width:100%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    display: none;
+    margin-top: -32px;
+    margin-left: -9px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+#right-nav-upper1:hover #right-nav-upper2{
+   display: block;
+    background-color: darksalmon;
+    }
+#login-as{
+     font-size: 20px;
+    margin-left: 28%;
+    margin-top: 6%;
+    }  
+#side-fix-div-photo{
     width: 40%;
     height: 580px;
     position: fixed;
@@ -77,7 +97,35 @@ else
     background-image: url( <?php echo $details1['pimgadd']; ?> );
     background-size: cover;
 }
-    </style>
+#fbtn{
+    height: 100px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.btn{
+    height:60px;
+    width: 110px;
+    float: left;
+    margin: 5px;
+    font-family: cursive;
+    background-color: aqua;
+    border-style: inset;
+    border-radius: 8%;
+}
+
+
+.btn:hover{
+    height:60px;
+    width: 110px;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: aqua;
+    border-style: inset;
+    border-radius: 8%;
+    cursor: pointer;
+}
+</style>
 
 </head>
 <body>
@@ -101,9 +149,13 @@ else
 <div id="right-nav"> 
 
     
-<div id="right-nav-upper">
+<div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
     <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
+    
+<div id="right-nav-upper2">
+    <span id="login-as"><a href="floginadmin.php">Login as Admin</a></span>
+</div>
 </div>
 
 <div id="menu">
@@ -114,7 +166,7 @@ else
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
  </ul>
 </div>
 </div>
@@ -192,35 +244,31 @@ else
         <p><?php echo $details1['pdesc'];  ?>  </p>
         <br>
         <div id="fbtn">
-        <button class="btn" onclick="cartadd()">Add To Cart</button>
-        <button class="btn">Proceed to Buy</button>
+        <a href="productinfophp.php?id=<?php echo $details1['pid'];  ?>"><button class="btn">Add To Cart</button></a>
+        <a href="#"><button class="btn">Proceed To Buy</button></a>
         </div>
             
     </div>
     
 </div>    
 
-<script>
- function cartadd()
-    {
- 
-       window.alert("<?php $k = $details1['pname']; echo  "$k , Added to the Cart"; ?>");   
-        
-        
-<?php
-    if(isset($_SESSION['emailadd']))
-    {
-    $db4 = mysqli_connect("localhost", "root", "", "myshopdb");
-    $a = $_SESSION['emailadd'];
-    $b = $details1['pid'];
-    $c = $details1['pname'];
-    $d = $details1['pprice'];
-       
-    $sql4 = "INSERT INTO carttable(emailadd, pid, pname, pprice) VALUES('$a', '$b', '$c', '$d')";
-     mysqli_query($db4, $sql4);
-    }
-?>
-    }
+    <script>
+    
+    <?php    
+    $mysession2 = $_SESSION['emailadd'];
+    $db = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records = mysqli_query($db, $sql);
+    $x = 1; 
+    while($row = $records->fetch_assoc()) 
+        {
+          $x = $x + 1;
+         }
+     
+        ?>
+    var a = document.getElementById("cartno");
+    a.innerHTML = <?php $x = $x-1; echo $x ?>;
+    
 </script>
     
 </body>

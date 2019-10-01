@@ -12,14 +12,11 @@ else
     $mysession = $_SESSION['emailadd'];
 }
 
-
-
     $mysession = $mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
-    
 ?>
 
 
@@ -29,7 +26,7 @@ else
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+   <style>
 
 #right-nav-upper1{
     width:48%;
@@ -82,14 +79,14 @@ else
     
 <nav>
 <div id="left-nav"><form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
+<input type="search" name="search" id="search-box" placeholder="Search the Products"/>
+<input type="submit" value="Search Now" onclick="searchfn();" id="search-btn"/>
 </form>
 </div>
     
 <div id="right-nav"> 
 
-    
+   
 <div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
     <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?>
@@ -99,6 +96,10 @@ else
 </div>
 </div>
 
+
+  
+    
+    
 <div id="menu">
  <ul>
     <li><a href="index.php">Home</a></li>
@@ -107,7 +108,7 @@ else
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
     <li><a href="logout.php">Logout</a></li>
-    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
+     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:24px"><sup><span id="cartno">0</span></sup></i></a></li>
  </ul>
 </div>
 </div>
@@ -174,44 +175,26 @@ else
 
 <div id="side-right-div">
 
-
-    
 <div id="side-right-div-border">
+    <script>
     
-    
+    function searchfn()
+    {
+        var t = document.getElementById("search-box").value;
+        window.alert(t);
 
-    <?php    
-        
-        $db = mysqli_connect("localhost", "root", "", "myshopdb");
-        $sql = "SELECT * FROM productinfo";
-        $records = mysqli_query($db, $sql);
-        
-    
-     while($row = $records->fetch_assoc()) 
-             {
-        if($row["off"] > 30 )
-        {
-        echo " <a href='productinfo.php?id=".$row['pid']." '><div id='all-size'> 
-        
-                        <div id='all-img' style='background:url("  .$row['pimgadd'].  "); background-size:cover;' ></div>
-                
-                        <span><center><small>" 
-                        .$row["pname"]. "<br>" .$row["off"]. "% Off </small> 
-                        <br> Rs. <b><big>" .$row["pprice"]. "</big></b> | <strike><small>Rs." .$row["pmrp"]. "</small></strike><center></span>
-               </div></a>
-        ";
-        }
-     }
-    
-        ?>
-  
+
+    }
+    </script>
 </div>
     
 </div>
     
 </div>    
-   
-    <script>
+    
+ 
+    
+<script>
     
     <?php    
     $mysession2 = $_SESSION['emailadd'];
@@ -228,7 +211,12 @@ else
     var a = document.getElementById("cartno");
     a.innerHTML = <?php $x = $x-1; echo $x ?>;
     
+    
+    
+    
+    
+    
 </script>
- 
+
 </body>
 </html>

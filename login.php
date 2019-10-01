@@ -1,5 +1,7 @@
 <?php
-   session_start();
+
+error_reporting(0);
+session_start();
 
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
  
