@@ -10,8 +10,10 @@ session_start();
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
- 
-        
+ <head>
+<title>Form<
+        <head>
+<title>Form<
          
 
                 $a = $_SESSION['emailadd'];
@@ -19,9 +21,9 @@ session_start();
                 $q = 0;
       
                 $sql2 = "UPDATE carttable SET pthree='$p' , ppthree='$q' WHERE emailadd='$a'";
-                mysqli_query($db2, $sql2);
+                , $sql2);
                 include 'cart.php';
 
         
 
-?> 
+?> mysqli_query($db2
