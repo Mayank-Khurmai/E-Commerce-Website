@@ -14,7 +14,8 @@ session_start();
         jsjdjjdm
         jdjdjdjd
         jdjdjdjd
-        jdkkdlekekd
+        jdkkdlekekd<head>
+<title>Form<
         kkskdkdkm
         jdjdkfkfk
         jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
@@ -32,7 +33,8 @@ session_start();
                 mysqli_quetdfgsd
                     ssghseehheh
                     sdgywafrgh
-                    eejrrghh
+                    eejrrghh<head>
+<title>Form<
                     srenjswe4yhj.sss
                     sdddry($db2, $sql2);
                 include 'cart.php';
