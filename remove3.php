@@ -11,7 +11,37 @@ session_start();
     $records2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
  <head>
-<title>Form<
+<title>Form<<!DOCTYPE html>
+<html>
+<head>
+<title>My Shop</title>
+<link rel="stylesheet" href="css.css">
+
+
+</head>
+<body>
+<div id="body-box">
+<div id="move">
+    <center><h1 id="x">0</h1></center>
+</div>    
+</div>
+<script>
+    var i=1;
+    var j=80;
+    var a = setInterval(rep, 4000);
+    function rep() 
+        {
+            var a = document.getElementById("x");
+            var b = document.getElementById("move");
+            a.innerHTML = i;
+            b.style.width =  j + "px";
+            b.style.height = j + "px";
+            i++;
+            j=j+10;
+        }
+</script>
+</body>
+</html>
         <head>
 <title>Form<
          
