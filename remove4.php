@@ -27,7 +27,7 @@ function check()
 	message.style.color = "red";
 	
 }
-
+ggg
 function check()
 {ff
 	var message = document.getElementById("message");
