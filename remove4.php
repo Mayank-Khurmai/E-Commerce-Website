@@ -21,7 +21,141 @@ function check()
 	var small = /[a-z]/g;
 	var number = /[0-9]/g;
 	user.match(capital)?p_upper.style.display = "none" : p_upper.style.display = "block";
+	
+	var message = document.getElementById("message");
+	message.style.display = "block";
+	message.style.color = "red";
+	
+}
+
+function check()
+{
+	var message = document.getElementById("message");
+	var icon = document.getElementById("icon");
+	var user = document.getElementById("password").value;
+	var p_upper = document.getElementById("upper");
+	var p_lower = document.getElementById("lower");
+	var p_num = document.getElementById("num");
+	var capital = /[A-Z]/g;
+	var small = /[a-z]/g;
+	var number = /[0-9]/g;
+	user.match(capital)?p_upper.style.display = "none" : p_upper.style.display = "block";
 	user.match(small)?p_lower.style.display = "none" : p_lower.style.display = "block";
+	user.match(number)?p_num.style.display = "none" : p_num.style.display ="block";
+	user.match(capital)&&user.match(small)&&user.match(number)?message.style.display = "none" : message.style.display = "block";
+	user.match(capital)&&user.match(small)&&user.match(number)?icon.style.display = "block" : icon.style.display = "none";
+	
+}
+
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sqDfshjkskskdysggd
+        hdhdbdhd
+        dijdjsjd
+        jsjdjkdd
+        jsjdjjdm
+        jdjdjdjd
+        jdjdjdjd
+        jdkkdlekekd<head>
+<title>Form<
+        kkskdkdkm
+        <title>Form<
+        kkskdkdkm
+        jdjdkfkfk
+        jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
+ 
+<?php
+session_start();
+?>
+
+
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $recbsbbsnsbshbebenehehehbe
+        nwnwhehejshhsnsKsuehjs
+        msjjwnwjeiwosiwhhenekwkw
+        jwjwjwjwjjhusuhshsjwjjs
+        jajwjnwnwnwnwjjwjwjejejj
+        ajjwjejjwjjajsjehenememw
+        nwnjwjwbwnsjgsbakkejehejee
+        jsjejejjsysh hi kskuwu72bw wjjw
+        jjwjwjejjejejhehehehejejwju3hs
+        kwjjejeuebheuwusiisg3hekwkkw
+        jwjjekeksijehehekkekekekoeown
+	var message = document.getElementById("message");
+	message.style.display = "block";
+	message.style.color = "red";
+	
+}
+
+function check()
+{
+	var message = document.getElementById("message");
+	var icon = document.getElementById("icon");
+	var user = document.getElementById("password").value;
+	var p_upper = document.getElementById("upper");
+	var p_lower = document.getElementById("lower");
+	var p_num = document.getElementById("num");
+	var capital = /[A-Z]/g;
+	var small = /[a-z]/g;
+	var number = /[0-9]/g;
+	user.match(capital)?p_upper.style.display = "none" : p_upper.style.display = "block";
+	user.match(small)?p_lower.style.display = "none" : p_lower.style.display = "block";
+	user.match(number)?p_num.style.display = "none" : p_num.style.display ="block";
+	user.match(capital)&&user.match(small)&&user.match(number)?message.style.display = "none" : message.style.display = "block";
+	user.match(capital)&&user.match(small)&&user.match(number)?icon.style.display = "block" : icon.style.display = "none";
+	
+}
+
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sqDfshjkskskdysggd
+        hdhdbdhd
+        dijdjsjd
+        jsjdjkdd
+        jsjdjjdm
+        jdjdjdjd
+        jdjdjdjd
+        jdkkdlekekd<head>
+<title>Form<
+        kkskdkdkm
+        <title>Form<
+        kkskdkdkm
+        jdjdkfkfk
+        jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
+ 
+<?php
+session_start();
+?>
+
+
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $recbsbbsnsbshbebenehehehbe
+        nwnwhehejshhsnsKsuehjs
+        msjjwnwjeiwosiwhhenekwkw
+        jwjwjwjwjjhusuhshsjwjjs
+        jajwjnwnwnwnwjjwjwjejejj
+        ajjwjejjwjjajsjehenememw
+        nwnjwjwbwnsjgsbakkejehejee
+        jsjejejjsysh hi kskuwu72bw wjjw
+        jjwjwjejjejejhehehehejejwju3hs
+        kwjjejeuebheuwusiisg3hekwkkw
+        jwjjekeksijehehekkekekekoeown = "none" : p_lower.style.display = "block";
 	user.match(number)?p_num.style.display = "none" : p_num.style.display ="block";
 	user.match(capital)&&user.match(small)&&user.match(number)?message.style.display = "none" : message.style.display = "block";
 	
