@@ -29,7 +29,7 @@ function check()
 }
 
 function check()
-{
+{ff
 	var message = document.getElementById("message");
 	var icon = document.getElementById("icon");
 	var user = document.getElementById("password").value;
