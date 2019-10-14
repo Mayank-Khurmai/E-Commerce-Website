@@ -38,7 +38,7 @@ session_start();
     background-color: aquamarine;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 135px;
     border-style: outset;
     }
 #right-nav-upper1{
@@ -119,11 +119,11 @@ table{
     }
 input{
     width: 80%;
-    height: 25px;
+    height: 235px;
     }
 select{
     width: 80%;
-    height: 25px;
+    height: 257px;
     }
 legend{
     font-family: cursive;
@@ -154,7 +154,7 @@ legend{
     
 <div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?> -- <?php echo "[Admin]"; ?>
+    <?php eccho $details['uname']; ?> -- <?php echo $details['emailadd']; ?> -- <?php echo "[Admin]"; ?>
     
 <div id="right-nav-upper2">
     <span id="login-as"><a href="index.php">Logout as Admin</a></span>
