@@ -17,7 +17,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Shop</title>
+<title>My Shopp</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="animate.css">
@@ -49,7 +49,7 @@ session_start();
     border-radius: 10px;
     position: absolute;
     background-color: darkgray;
-    padding: 10px;
+    padding: 100px;
 }
 
 #right-nav-upper1:hover #right-nav-upper2{
@@ -132,7 +132,7 @@ th{
 </head>
 <body>
 
-<div id="outer-box">
+<div id="outer-boox">
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
