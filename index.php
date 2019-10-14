@@ -23,7 +23,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Shop</title>
+<title>mMy Shoop</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
@@ -51,7 +51,8 @@ else
     margin-left: -9px;
     border-radius: 10px;
     position: absolute;
-    background-color: darkgray;
+    background-color: red;
+
     padding: 10px;
 }
 
@@ -103,7 +104,7 @@ else
 <div id="menu">
  <ul>
     <li><a href="index.php">Home</a></li>
-    <li><a href="access.php">Accesories</a></li>
+    <li><a href="access.php">Accesoriies</a></li>
     <li><a href="offer.php">Offers Zone</a></li>
     <li><a href="about.php">About Us</a></li>
     <li><a href="fcontact.php">Contact Us</a></li>
