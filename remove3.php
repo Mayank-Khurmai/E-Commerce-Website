@@ -21,7 +21,9 @@ session_start();
 </head>
 <body>
 <div id="body-box">
-<div id="move">
+<div id="move">nsnsns
+     jsnsnnsms
+     nsnnsndmd
     <center><h1 id="x">0</h1></center>
 </div>    
 </div>
