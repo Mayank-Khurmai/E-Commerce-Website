@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 
 if(!isset($_SESSION['emailadd']))
@@ -62,7 +63,7 @@ else
      font-size: 20px;
     margin-left: 28%;
     margin-top: 6%;
-    }  
+    }   
 #content{
     margin-top: 0px;
     margin-left: 3%;
@@ -70,9 +71,9 @@ else
     font-family: inherit;
        } 
 #content1{
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 1%;
-    margin-bottom: -6px;
+    margin-bottom: -1%;
     font-family: inherit;
        }
 #tdtwo{
@@ -145,7 +146,8 @@ else
     
 
 <div id="search-by-category-div2"> 
-
+    
+    
 <form method="post" action="searchcat.php">
 <table width="100%" height="300px">
 
@@ -153,18 +155,18 @@ else
 <td><p id="product-type">Product Type</p></td>
 <td id="tdtwo">
 <select id="td2length" name="pcat">
-<option value="All">All types</option>
-<option value="TV and Appliances">TV and Appliances </option>
-<option value="Mens Wear">Mens Products</option>
-<option value="Womens Wear">Womens Products</option>
-<option value="Furnitures">Furnitures</option>
-<option value="Electronics">Electronics</option>
-<option value="Clothes and Fashion">Clothes and Fashion</option>
-<option value="Beauty and Health">Beauty and Health</option>
-<option value="Accessories">Accessories</option>
-<option value="Home and Grocery">Home and Grocery</option>
-<option value="Mobiles and Laptops">Mobiles and Laptops</option>
-<option value="Sports Wear">Sports Wear</option>
+<option value="All" <?php if($_POST['pcat']=="All") echo "selected=\"selected\""; ?>>All types</option>
+<option value="TV and Appliances" <?php if($_POST['pcat']=="TV and Appliances") echo "selected=\"selected\""; ?>>TV and Appliances </option>
+<option value="Mens Products " <?php if($_POST['pcat']=="Mens Products") echo "selected=\"selected\""; ?>>Mens Products</option>
+<option value="Womens Products" <?php if($_POST['pcat']=="Womens Products") echo "selected=\"selected\""; ?>>Womens Products</option>
+<option value="Furnitures" <?php if($_POST['pcat']=="Furnitures") echo "selected=\"selected\""; ?>>Furnitures</option>
+<option value="Electronics" <?php if($_POST['pcat']=="Electronics") echo "selected=\"selected\""; ?>>Electronics</option>
+<option value="Clothes and Fashion" <?php if($_POST['pcat']=="Clothes and Fashion") echo "selected=\"selected\""; ?>>Clothes and Fashion</option>
+<option value="Beauty Products" <?php if($_POST['pcat']=="Beauty Products") echo "selected=\"selected\""; ?>>Beauty Products</option>
+<option value="Accessories" <?php if($_POST['pcat']=="Accessories") echo "selected=\"selected\""; ?>>Accessories</option>
+<option value="Home and Grocery" <?php if($_POST['pcat']=="Home and Grocery") echo "selected=\"selected\""; ?>>Home and Grocery</option>
+<option value="Mobiles and Laptops" <?php if($_POST['pcat']=="Mobiles and Laptops") echo "selected=\"selected\""; ?>>Mobiles and Laptops</option>
+<option value="Health and Sports Wear" <?php if($_POST['pcat']=="Health and Sports Wear") echo "selected=\"selected\""; ?>>Health and Sports Wear</option>
 </select>    
 </td>
 </tr>
@@ -172,13 +174,13 @@ else
 <td><p id="rating">Choose rating</p></td>
 <td id="tdtwo">
 <select id="td2length" name="prating">
-<option value="0">All types</option>
-<option value="0">0+</option>
-<option value="1">1+</option>
-<option value="2">2+</option>
-<option value="3">3+</option>
-<option value="4">4+</option>
-<option value="5">5+</option>
+<option value="0" <?php if($_POST['prating']=="0") echo "selected=\"selected\""; ?>>All types</option>
+<option value="0" <?php if($_POST['prating']=="0") echo "selected=\"selected\""; ?>>0+</option>
+<option value="1" <?php if($_POST['prating']=="1") echo "selected=\"selected\""; ?>>1+</option>
+<option value="2" <?php if($_POST['prating']=="2") echo "selected=\"selected\""; ?>>2+</option>
+<option value="3" <?php if($_POST['prating']=="3") echo "selected=\"selected\""; ?>>3+</option>
+<option value="4" <?php if($_POST['prating']=="4") echo "selected=\"selected\""; ?>>4+</option>
+<option value="5" <?php if($_POST['prating']=="5") echo "selected=\"selected\""; ?>>5+</option>
 </select>    
 </td>
 </tr>
@@ -197,8 +199,8 @@ else
 <td id="tdtwo">
 <select id="td2length" name="pquality">
 <option value="All">All types</option>
-<option value="Original">Original or Branded</option>
-<option value="Local">Local or Duplicate</option>
+<option value="Original" <?php if($_POST['pquality']=="Original") echo "selected=\"selected\""; ?>>Original or Branded</option>
+<option value="Local" <?php if($_POST['pquality']=="Local") echo "selected=\"selected\""; ?>>Local or Duplicate</option>
 </select>    
 </td>
 </tr>
@@ -207,8 +209,7 @@ else
 <td colspan="2"><input type="submit" value="Search" name="searchcat"></td>
 </tr>
 </table>    
-</form>    
-
+</form>
     
 </div>     
 
@@ -218,17 +219,42 @@ else
 
 <div id="side-right-div-border">
     
-    <h4 id="content1"></h4>
+    
+
+    <h4 id="content1"></h4><ul>
+                                <li id="pcat"></li>
+                                <li id="prating"></li>
+                                <li id="pprange"></li>
+                                <li id="pquality"></li>
+                            </ul>
     <h1 id="content">* <u>Similar Products are</u> :- </h1>  
     
     
     
        <?php    
-        if(isset($_POST['search']))
+        if(isset($_POST['searchcat']))
         {
-        $searchvalue = $_POST['searchval'];
+        $pcat = $_POST['pcat'];
+        $prating = $_POST['prating'];
+        $prange = $_POST['prange'];
+        $pquality = $_POST['pquality'];
+        if( $pquality == "All")
+        {
+            $pquality1f = "Original";
+            $pquality2f = "Local";
+        }
+        else if( $pquality == "Original")
+        {
+            $pquality1f = "Original";
+            $pquality2f = "Original";
+        }
+        else
+        {
+            $pquality1f = "Local";
+            $pquality2f = "Local";
+        }
         $db = mysqli_connect("localhost", "root", "", "myshopdb");
-        $sql = "SELECT * FROM productinfo WHERE pname LIKE '%$searchvalue%'";
+        $sql = "SELECT * FROM productinfo WHERE ( cata = '$pcat' OR catb = '$pcat' OR catc = '$pcat' OR catd = '$pcat' ) AND ( pquality = '$pquality1f' OR pquality = '$pquality2f' ) AND ( rating >= '$prating' ) AND ( pprice <= '$prange' )";
         $records = mysqli_query($db, $sql);
         
     
@@ -245,9 +271,7 @@ else
         }
     
         ?>
-    
-    
-    
+  
 </div>
     
 </div>
@@ -257,10 +281,7 @@ else
  
     
 <script>
-    
-    <?php 
-    
-    
+    <?php    
     $mysession2 = $_SESSION['emailadd'];
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
@@ -271,28 +292,34 @@ else
           $x = $x + 1;
          }
      
-    ?>
+        ?>
     var a = document.getElementById("cartno");
     a.innerHTML = <?php $x = $x-1; echo $x ?>;
     
+        var m = document.getElementById("content1");
+        var la = document.getElementById("pcat");
+        var lb = document.getElementById("prating");
+        var lc = document.getElementById("pprange");
+        var ld = document.getElementById("pquality");
     
-    
-    var m = document.getElementById("content1");
-    var n = "You Searched for - ";
+    var n = "You Searched for :- ";
     var p = " <?php echo $searchvalue; ?>";
     m.innerHTML = n + p; 
     
-      window.omload = slider();
+    la.innerHTML = "Product Category - <?php echo $pcat; ?>";
+    lb.innerHTML = "Product Rating - <?php echo $prating; ?>+";
+    lc.innerHTML = "Product Range - Rs. 0 to <?php echo $prange; ?>";
+    ld.innerHTML = "Product Quality - <?php echo $pquality; ?>";  
+    
+    
+    window.omload = slider();
     function slider(){
         var one = document.getElementById("sliderval1").value;
         var two = document.getElementById("sliderval2");
         two.innerHTML = "Rs. 0 to " + one;
     }
     
-    </script>
+</script>
 
 </body>
 </html>
-
-
- 

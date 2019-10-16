@@ -17,7 +17,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Shopp</title>
+<title>My Shop</title>
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="animate.css">
@@ -49,7 +49,7 @@ session_start();
     border-radius: 10px;
     position: absolute;
     background-color: darkgray;
-    padding: 100px;
+    padding: 10px;
 }
 
 #right-nav-upper1:hover #right-nav-upper2{
@@ -106,6 +106,15 @@ legend{
     border-style: inherit;
     cursor: pointer;
     }
+#search-box:hover{
+    background-color: ghostwhite;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+#search-btn:hover{
+    border-radius: 6px;
+    cursor: not-allowed;
+}
 #an-div{
     width: 100%;
     height: auto;
@@ -132,7 +141,7 @@ th{
 </head>
 <body>
 
-<div id="outer-boox">
+<div id="outer-box">
     
 <header>
 <h1 id="brand-name">myshop.com</h1>
@@ -142,10 +151,11 @@ th{
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" onkeyup="searchfn()" id="search-box" placeholder="Search the Products"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form>
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products" disabled="disabled"/>
+<input type="submit" name="search" value="Search Now" id="search-btn" disabled="disabled"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -168,7 +178,7 @@ th{
     <li><a href="#">About Us</a></li>
     <li><a href="#">Contact Us</a></li>
     <li><a href="#">Logout</a></li>
-     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
  </ul>
 </div>
 </div>
@@ -186,6 +196,7 @@ th{
 <a href="addproduct.php"><button class="btn-size">Add Product</button></a>
 <a href="remproduct.php"><button class="btn-size">Remove Product</button></a>
 <a href="updateproduct.php"><button class="btn-size">Update Product</button></a>
+<a href="userquery.php"><button class="btn-size">User Queries</button></a>
 <a href="deleteuser.php"><button class="btn-size">Remove User</button></a>
 
     
@@ -215,11 +226,11 @@ th{
     $records = mysqli_query($db, $sql);
         
         echo "<table border='2' width='70%'>";
-        echo "<tr> <th>Product Id</th> <th> Product Name </th> <th>Edit Product</th>  ";
+        echo "<tr> <th>Product Id</th> <th> Product Name </th> <th>Preview</th> <th width='18%'>Edit Product</th>  ";
              while($row = $records->fetch_assoc()) 
              {
                  $z= $row["pid"];
-                echo   "<tr> <td align='center'>" .$row["pid"].  "</td> <td align='center'>" .$row["pname"].  "</td> <td align='center'><a href="."updateproduct2.php?id=".$z."><i class='fa fa-edit' aria-hidden='true' style='cursor:pointer; font-size:20px;'></i></a></td> </tr>";
+                echo   "<tr> <td align='center'>" .$row["pid"].  "</td> <td align='center'>" .$row["pname"].  "</td> <td padding='1px' align='center'> <img src='images/" .$row["pimgadd"].  "' width='40px' heght='30px'></td> <td align='center'><a href="."updateproduct2.php?id=".$z."><i class='fa fa-edit' aria-hidden='true' style='cursor:pointer; font-size:20px;'></i></a></td> </tr>";
              }
         
         echo "</table>";

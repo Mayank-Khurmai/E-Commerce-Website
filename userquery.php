@@ -25,7 +25,12 @@ session_start();
 *{
     box-sizing: border-box;    
     }    
-
+#btn{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    } 
+   
 #right-nav-upper1{
     width:48%;
     height:50px;
@@ -52,7 +57,11 @@ session_start();
     background-color: darkgray;
     padding: 10px;
 }
-
+#menu ul li a:hover{
+    background-color: brown;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
 #right-nav-upper1:hover #right-nav-upper2{
    display: block;
     background-color: darksalmon;
@@ -61,12 +70,7 @@ session_start();
      font-size: 20px;
     margin-left: 28%;
     margin-top: 6%;
-    }   
-#btn{
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    } 
+    }  
 .btn-size{
     width: 100%;
     height: 100px;
@@ -78,15 +82,30 @@ session_start();
     font-size: 15px;
     border-style: outset;
     }
-legend{
+ legend{
     font-family: cursive;
     font-weight: bold;
-    }    
-#menu ul li a:hover{
-    background-color: brown;
+    }   
+    
+#add-field{
+    width:80%;
+    height: 680px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2%;
+    border: 2px solid black;
+    }  
+#search-box:hover{
+    background-color: ghostwhite;
     border-radius: 6px;
     cursor: not-allowed;
-}   
+}
+#search-btn:hover{
+    border-radius: 6px;
+    cursor: not-allowed;
+}  
+    
+    
 .btn-size:hover{
     width: 100%;
     height: 100px;
@@ -99,14 +118,6 @@ legend{
     border-style: inherit;
     cursor: pointer;
     }
-
-#add-field{
-    width:80%;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding: 2%;
-    border: 2px solid black;
-    }    
 #an-div{
     width: 100%;
     height: auto;
@@ -118,20 +129,14 @@ legend{
 td{
     height: 40px;
     }
+td{
+    height: 40px;
+    }
 table{
     margin: 0 auto;
     margin-top: 2%;
     margin-bottom: 2%;
     }
-#search-box:hover{
-    background-color: ghostwhite;
-    border-radius: 6px;
-    cursor: not-allowed;
-}
-#search-btn:hover{
-    border-radius: 6px;
-    cursor: not-allowed;
-}
 th{
     background-color: greenyellow;
     }
@@ -214,29 +219,31 @@ th{
 
 <div id="side-right-div">     
     <div id="an-div">
-      
-        <fieldset id="add-field">
-        <legend>Delete Product</legend>
         
+        
+    <fieldset id="add-field">
+        <legend>User Queries</legend>      
     <?php    
         
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
-    $sql = "SELECT * FROM productinfo";
+    $sql = "SELECT * FROM contact";
     $records = mysqli_query($db, $sql);
         
-        echo "<table border='2' width='70%'>";
-        echo "<tr> <th>Product Id</th> <th> Product Name </th> <th>Preview</th> <th width='18%'>Delete Product</th>  ";
+        echo "<table border='2' width='95%'>";
+        echo "<tr> <th>Sr. No.</th> <th> User Name </th><th>E-mail</th> <th>Mobile No.</th>  <th>Query Subject</th>   <th>Query Description</th>  ";
+        $x = 1; 
              while($row = $records->fetch_assoc()) 
              {
-                 $z = $row["pid"];
-                echo   "<tr> <td align='center'>" .$row["pid"].  "</td> <td align='center'>" .$row["pname"].  "</td> <td padding='1px' align='center'> <img src='images/" .$row["pimgadd"].  "' width='40px' heght='30px'></td> <td align='center'><a href="."remproductphp.php?id="."$z"."><i class='fa fa-trash' aria-hidden='true' style='cursor:pointer; font-size:20px;'></i></a></td> </tr>";
+                 $z = $row["emailadd"];
+                echo   "<tr> <td align='center'>" .$x.  "</td> <td align='center'>" .$row["cname"].  "</td> <td align='center'>" .$row["cemail"].  "</td> <td align='center'>" .$row["cmobile"].  "</td><td align='center'>" .$row["csubject"].  "</td><td>" .$row["ctext"].  "</td> </tr>";
+                 $x = $x + 1;
              }
         
         echo "</table>";
-    
+        
         ?>
-        </fieldset>
-            
+        
+        </fieldset>    
         </div>
 </div>
     
