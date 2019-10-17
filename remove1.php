@@ -17,6 +17,7 @@ session_start();
 pkg update
 pkg upgrade<title>Form<
         kkskdkdkm
+             <head>
         jdjdkfkfk
         jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
