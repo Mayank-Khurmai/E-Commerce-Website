@@ -25,7 +25,8 @@ session_start();
      jsnsnnsms
      nsnnsndmd
     <center><h1 id="x">0</h1></center>
-</div>    
+</div>   
+<html>
 </div>
 <script>
     var i=1;
