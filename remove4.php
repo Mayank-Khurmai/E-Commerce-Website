@@ -21,7 +21,10 @@ function check()
 	var small = /[a-z]/g;
 	var number = /[0-9]/g;
 	user.match(capital)?p_upper.style.display = "none" : p_upper.style.display = "block";
-	
+	    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $recbsbbsnsbshbebenehehehbe
 	var message = document.getElementById("message");
 	message.style.display = "block";
 	message.style.color = "red";
