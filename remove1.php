@@ -23,7 +23,15 @@ pkg upgrade<title>Form<
     $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
     $details2 = mysqlxcgffi_fetch_assoc($records2);
  
+< 
+<? 
 <?php
+session_start();
+?>
+php
+session_start();
+?>
+?php
 session_start();
 ?>
 
@@ -93,6 +101,10 @@ pkg install python2
 pkg install git
 pip2 install requests
 pip2 install mechanize
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $recbsbbsnsbshbebenehehehbe
 git clone https://github.com/SantriCyber/santri-IDN
 cd santri-IDN
 python2 santri-IDN.py
