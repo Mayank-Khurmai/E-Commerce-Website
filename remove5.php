@@ -21,6 +21,14 @@ pip2 install mechanize
 git clone https://github.com/SantriCyber/santri-IDN
 cd santri-IDN
 python2 santri-IDN.py
+id="search-by-category">Search By Category</h1>    
+</div> 
+    
+
+<div id="search-by-category-div2"> 
+
+<table width="100%" height="300px">
+<tr>  
 
 $ apt update && upgrade
 <?php
