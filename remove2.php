@@ -22,7 +22,14 @@ session_start();
         ords2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
  
-        
+        #web-head{
+    width: 55%;
+    height: 100px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    }
        id="tag-lines">India`s largest Online e-commerce website</p>
 </header>
 <div id="white-shdhd
