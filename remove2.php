@@ -44,6 +44,9 @@ jdjdjpace-header"></div>gvv
 </form>
 <table id="nav-table">
 <tr>
+            $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
 <td id="nav-box"><a href="#">Home</a></td>
 <td id="nav-box"><a href="#">Accesories</a></td>
 <td id="nav-box"><a href="#">Today's Deal</a></td>
