@@ -65,7 +65,11 @@ jdjdjpace-header"></div>gvv
 session_start();
 ?>
 
-
+<td id="nav-box"><a href="#">Accesories</a></td>
+<td id="nav-box"><a href="#">Today's Deal</a></td>
+<td id="nav-box"><a href="#">Offer Zone</a></td>
+<td id="nav-box"><a href="#">Contact Us</a></td>
+<td id="nav-box-cart"><a href="#">Cart</a></td>
 
 <?php
     $mysession2 = $_SESSION['emailadd'];
