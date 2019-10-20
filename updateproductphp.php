@@ -24,16 +24,30 @@ if (isset($_POST['addbtn']))
     $pld = mysqli_real_escape_string($db, $_POST['pld']);
     $ple = mysqli_real_escape_string($db, $_POST['ple']);
     $pdesc = mysqli_real_escape_string($db, $_POST['pdesc']);
-    $pimgadd = time().$_FILES['imgadd']['name']; 
-    $target = "images/" . $pimgadd;   
-    move_uploaded_file($_FILES['imgadd']['tmp_name'], $target);
-    
-    
-    $db = mysqli_connect("localhost", "root", "", "myshopdb");
-    $sql5 = "UPDATE productinfo SET pname='$pname' , pmrp='$pmrp' , pprice='$pprice' , psave='$psave' , off='$off' , cata='$cata', catb='$catb',
+    $pimgadd1 = $_FILES['imgadd']['name'];
+    if($pimgadd1 = "abcd ")
+        {
+        $db = mysqli_connect("localhost", "root", "", "myshopdb");
+        $sql5 = "UPDATE productinfo SET pname='$pname' , pmrp='$pmrp' , pprice='$pprice' , psave='$psave' , off='$off' , cata='$cata', catb='$catb',
                                     catc='$catc', catd='$catd', pquality='$pquality', pavailable='$pavail' , 
                                     pla='$pla' , plb='$plb' , plc='$plc' , pld='$pld' , ple='$ple' , pdesc='$pdesc' WHERE pid = '$pid' ";
-    mysqli_query($db, $sql5);
+        mysqli_query($db, $sql5);
+        }
+    
+    else
+        {
+        $pimgadd = time().$_FILES['imgadd']['name']; 
+        $target = "images/" . $pimgadd;   
+        move_uploaded_file($_FILES['imgadd']['tmp_name'], $target);
+        $db = mysqli_connect("localhost", "root", "", "myshopdb");
+      
+        $sql5 = "UPDATE productinfo SET pname='$pname' , pmrp='$pmrp' , pprice='$pprice' , psave='$psave' , off='$off' , cata='$cata', catb='$catb',
+                                    catc='$catc', catd='$catd', pquality='$pquality', pavailable='$pavail' , 
+                                    pla='$pla' , plb='$plb' , plc='$plc' , pld='$pld' , ple='$ple' , pdesc='$pdesc' , pimgadd='$pimgadd' WHERE pid = '$pid' ";
+        mysqli_query($db, $sql5);
+        }
+    
+    
             
     include 'updateproduct.php';
  

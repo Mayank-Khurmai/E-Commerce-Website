@@ -359,7 +359,7 @@ legend{
         </tr>
         <tr>
         <td id="td-one">Update Image</td>
-        <td><input type="file" accept=".jpeg , .jpg" name="imgadd"></td>
+        <td><input type="file" accept="image/*" id="imgurl" name="imgadd" onchange="preview();"></td>
         </tr>
         <tr>
         <td colspan="2">
@@ -414,11 +414,15 @@ legend{
          d.setAttribute("value", f);
          d.setAttribute("placeholder", f);
      }
-     function preview(){
-         var m = document.getElementById("imgurl").value.replace(/.*(\/|\\)/, '');
-         var n = document.getElementById("preview-div");
-         n.style.background = "url(" +m+ ")";
-         n.style.backgroundSize = "cover";
+    function preview(){
+         var input = document.getElementById("imgurl");
+         var freader = new FileReader();
+         freader.readAsDataURL(input.files[0]);
+         freader.onloadend = function(event){
+                    var prdiv = document.getElementById("preview-div");
+                    prdiv.style.background = "url("+event.target.result+")";
+                    prdiv.style.backgroundSize = "cover";
+                }
      }
     </script>
 </body>
