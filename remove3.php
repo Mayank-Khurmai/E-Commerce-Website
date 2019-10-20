@@ -2,7 +2,9 @@
 session_start();
 ?>
 
-
+ $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
 
 <?php
     $mysession2 = $_SESSION['emailadd'];
