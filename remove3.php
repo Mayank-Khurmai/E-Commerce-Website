@@ -32,7 +32,7 @@ session_start();
 <div id="move">nsnsns
      jsnsnnsms
      nsnnsndmd
-    <center><h1 id="x">0</h1></center>
+    <centgegeer><h1 id="x">0</h1></center>
 </div>   
 <html>
 </div>
