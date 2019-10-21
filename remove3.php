@@ -28,7 +28,7 @@ session_start();
 
 </head>
 <body>
-<div id="body-box">
+<div id=hdhs"body-box">
 <div id="move">nsnsns
      jsnsnnsms
      nsnnsndmd
