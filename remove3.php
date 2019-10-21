@@ -39,7 +39,13 @@ session_start();
 <script>
     var i=1;
     var j=80;
-    var a = setInterval(rep, 4000);
+    var <td id="nav-box"><a href="#">Home</a></td>
+<td id="nabbebev-box"><a href="#">Accesories</a></td>
+<td id="nav-box"><a href="#">Today's Deal</a></td>
+<td id="nav-box"><a href="#">Offer Zone</a></td>
+<td id="nav-box"><a href="#">Contact Us</a></td>
+<td id="nav-box-cart"><a href="#">Cart</a></td>
+</tr> = setInterval(rep, 4000);
     function rep() 
         {
             var a = document.getElementById("x");
