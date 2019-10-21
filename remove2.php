@@ -77,7 +77,13 @@ session_start();
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $recbsbbsnsbshbebenehehehbe
         nwnwhehejshhsnsKsuehjs
-        msjjwnwjeiwosiwhhenekwkw
+      <td id="nav-box"><a href="#">Home</a></td>
+<td id="nav-box"><a href="#">Accesories</a></td>
+<td id="nav-box"><a href="#">Today's Deal</a></td>
+<td id="nav-box"><a href="#">Offer Zone</a></td>
+<td id="nav-box"><a href="#">Contact Us</a></td>
+<td id="nav-box-cart"><a href="#">Cart</a></td>
+</tr>  msjjwnwjeiwosiwhhenekwkw
         jwjwjwjwjjhusuhshsjwjjs
         jajwjnwnwnwnwjjwjwjejejj
         ajjwjejjwjjajsjehenememw
