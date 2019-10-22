@@ -24,7 +24,9 @@ pkg upgrade<title>Form<
     $details2 = mysqlxcgffi_fetch_assoc($records2);
  
 < 
-<? 
+<?  $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
+ 
 <?php
 session_start();
 ?>
