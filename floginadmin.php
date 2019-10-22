@@ -13,7 +13,6 @@ else
 }
 
 
-
     $mysession = $mysession;
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";

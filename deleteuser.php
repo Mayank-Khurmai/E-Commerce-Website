@@ -94,7 +94,16 @@ session_start();
     margin-top: 10px;
     padding: 2%;
     border: 2px solid black;
-    }    
+    }  
+#search-box:hover{
+    background-color: ghostwhite;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+#search-btn:hover{
+    border-radius: 6px;
+    cursor: not-allowed;
+}  
     
     
 .btn-size:hover{
@@ -145,10 +154,11 @@ th{
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" onkeyup="searchfn()" id="search-box" placeholder="Search the Products"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form>
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products" disabled="disabled"/>
+<input type="submit" name="search" value="Search Now" id="search-btn" disabled="disabled"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -171,7 +181,7 @@ th{
     <li><a href="#">About Us</a></li>
     <li><a href="#">Contact Us</a></li>
     <li><a href="#">Logout</a></li>
-     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
  </ul>
 </div>
 </div>
@@ -189,6 +199,7 @@ th{
 <a href="addproduct.php"><button class="btn-size">Add Product</button></a>
 <a href="remproduct.php"><button class="btn-size">Remove Product</button></a>
 <a href="updateproduct.php"><button class="btn-size">Update Product</button></a>
+<a href="userquery.php"><button class="btn-size">User Queries</button></a>
 <a href="deleteuser.php"><button class="btn-size">Remove User</button></a>
 
     

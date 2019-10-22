@@ -19,6 +19,7 @@ else
     $sql = "SELECT * FROM logininfo WHERE emailadd='$mysession'";
     $records = mysqli_query($db, $sql);
     $details = mysqli_fetch_assoc($records);
+
 ?>
 
 
@@ -84,7 +85,12 @@ else
 legend{
     font-family: cursive;
     font-weight: bold;
-    }    
+    }     
+#content{
+    margin-left: 3%;
+    color: red;
+    font-family: inherit;
+     } 
     
 </style>
     
@@ -101,10 +107,11 @@ legend{
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form method="post" action="search.php">
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products"/>
+<input type="submit" name="search" value="Search Now" id="search-btn"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -145,22 +152,22 @@ legend{
 <table id="contact-table">
 <tr>
 <td>Full Name</td>
-<td><input type="text" name="cname" required="required"></td>
+<td><input type="text" name="cname" value="<?php echo $details['uname']; ?>" required="required" placeholder="Your Name"></td>
 </tr>
 <tr>
 <td>E-mail id</td>
-<td><input type="email" name="cemail" required="required"></td>
+<td><input type="email" name="cemail" value="<?php echo $details['emailadd']; ?>" required="required" placeholder="Your E-mail"></td>
 </tr>
 <tr>
 <td>Mobile</td>
-<td><input type="tel>" name="cmobile" required="required"></td>
+<td><input type="tel>" name="cmobile" value="<?php echo $details['mobileno']; ?>" required="required" placeholder="Mobile Number"></td>
 </tr>
 <tr>
 <td>Subject</td>
-<td><input type ="text" name="csubject" required="required"></td>
+<td><input type ="text" name="csubject" required="required" placeholder="Subject of Query"></td>
 </tr>
 <tr>
-<td colspan="2"><textarea name="ctext" cols="40" rows="15">Type Your Message Here</textarea></td>
+<td colspan="2"><textarea name="ctext" cols="40" rows="15" placeholder="Type Your Query in Brief"></textarea></td>
 </tr>
 <tr>
 <td colspan="2">
