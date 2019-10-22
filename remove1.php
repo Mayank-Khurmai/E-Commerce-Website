@@ -28,7 +28,81 @@ pkg upgrade<title>Form<
 <?php
 session_start();
 ?>
-php
+php cc = document.getElementById("starcc");
+    dd = document.getElementById("stardd");
+    ee = document.getElementById("staree");
+    
+    aa.onmouseover = function(){mone()};    
+    bb.onmouseover = function(){mtwo()};
+    cc.onmouseover = function(){mthree()};
+    dd.onmouseover = function(){mfour()};
+    ee.onmouseover = function(){mfive()};
+        
+       
+    bb.onclick = function(){mtwo()};
+    cc.onclick = function(){mthree()};
+    dd.onclick = function(){mfour()};
+    ee.onclick = function(){mfive()};
+        
+        
+    function mone()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+        }
+    function mtwo()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+        }
+    function mthree()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+        }
+    function mfour()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            dd.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+            dd.onmouseout = function(){mm()};
+        }
+    function mfive()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            dd.setAttribute("class", "fa fa-star");
+            ee.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+            dd.onmouseout = function(){mm()};
+            ee.onmouseout = function(){mm()};
+        }
+          
+    
+        function mm()
+        {
+            aa.setAttribute("class", "fa fa-star-o");
+            bb.setAttribute("class", "fa fa-star-o");
+            cc.setAttribute("class", "fa fa-star-o");
+            dd.setAttribute("class", "fa fa-star-o");
+            ee.setAttribute("class", "fa fa-star-o");
+        }
+        
+    
+        
 session_start();
 ?>
 ?php
