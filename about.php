@@ -90,7 +90,12 @@ legend{
 p{
     text-align: justify;
     font-family: sans-serif;
-    }
+    }  
+#content{
+    margin-left: 3%;
+    color: red;
+    font-family: inherit;
+     }
 </style>
     
 </head>
@@ -106,10 +111,11 @@ p{
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form method="post" action="search.php">
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products"/>
+<input type="submit" name="search" value="Search Now" id="search-btn"/>
+    </form>
 </div>
     
 <div id="right-nav"> 

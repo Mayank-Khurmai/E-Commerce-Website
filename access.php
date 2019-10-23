@@ -66,7 +66,28 @@ else
      font-size: 20px;
     margin-left: 28%;
     margin-top: 6%;
-    }  
+    }   
+#content{
+    margin-top: 0px;
+    margin-left: 3%;
+    color: red;
+    font-family: inherit;
+       } 
+#content1{
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: -1%;
+    font-family: inherit;
+       }
+#tdtwo{
+    width: 70%;     
+       }
+#td2length{
+    width: 100%;
+       }
+#sliderval1{
+    width: 80%;
+       }
 </style>
 </head>
 <body>
@@ -81,10 +102,11 @@ else
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form method="post" action="search.php">
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products"/>
+<input type="submit" name="search" value="Search Now" id="search-btn"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -124,48 +146,68 @@ else
 
 <div id="search-by-category-div2"> 
 
+<form method="post" action="searchcat.php">
 <table width="100%" height="300px">
-<tr>
-<td><p id="tel">Pin Code</p></td>
-<td><input type ="tel" max="6"></td>
-</tr>
+
 <tr>
 <td><p id="product-type">Product Type</p></td>
-<td>
-<select name="product-category-type">
-<option value="all-rating">------Product Category------</option>
-<option value="zero-rating">TV &amp; Appliances </option>
-<option value="one-rating">Mens Wear</option>
-<option value="two-rating">Womens Wear</option>
-<option value="three-rating">Home &amp; Furniture</option>
-<option value="four-rating">Electronics</option>
-<option value="five-rating">Sports Wear</option>
+<td id="tdtwo">
+<select id="td2length" name="pcat">
+<option value="All">All types</option>
+<option value="TV and Appliances">TV and Appliances </option>
+<option value="Mens Products">Mens Products</option>
+<option value="Womens Products">Womens Products</option>
+<option value="Furnitures">Furnitures</option>
+<option value="Electronics">Electronics</option>
+<option value="Clothes and Fashion">Clothes and Fashion</option>
+<option value="Beauty Products">Beauty Products</option>
+<option value="Accessories">Accessories</option>
+<option value="Home and Grocery">Home and Grocery</option>
+<option value="Mobiles and Laptops">Mobiles and Laptops</option>
+<option value="Health and Sports Wear">Health and Sports Wear</option>
 </select>    
 </td>
 </tr>
 <tr>
 <td><p id="rating">Choose rating</p></td>
-<td>
-<select name="price-range">
-<option value="all-rating">------Product Rating------</option>
-<option value="five-rating">All type</option>
-<option value="zero-rating">0</option>
-<option value="one-rating">1</option>
-<option value="two-rating">2</option>
-<option value="three-rating">3</option>
-<option value="four-rating">4</option>
-<option value="five-rating">5</option>
+<td id="tdtwo">
+<select id="td2length" name="prating">
+<option value="0">All types</option>
+<option value="0">0+</option>
+<option value="1">1+</option>
+<option value="2">2+</option>
+<option value="3">3+</option>
+<option value="4">4+</option>
+<option value="5">5+</option>
 </select>    
 </td>
 </tr>
 <tr>
-<td><p id="price-range">Price Range</p></td> 
-<td><span><sup>50</sup></span><input type="range" min="50" max="10000"><span><sup>10000</sup></span></td>
+<td><p id="prange">Price Range</p></td> 
+<td id="tdtwo">
+    <span><sup>10</sup></span><input type="range" name="prange" min="10" id="sliderval1" max="20000" oninput="slider();"><span><sup>20000</sup></span>
+</td>
 </tr>
 <tr>
-<td><input type="submit" value="Search"></td>
+<td></td> 
+<td id="tdtwo"><span id="sliderval2"></span></td>
+</tr>
+<tr>
+<td><p id="product-type">Product Quality</p></td>
+<td id="tdtwo">
+<select id="td2length" name="pquality">
+<option value="All">All types</option>
+<option value="Original">Original or Branded</option>
+<option value="Local">Local or Duplicate</option>
+</select>    
+</td>
+</tr>
+<tr>
+<tr>
+<td colspan="2"><input type="submit" value="Search" name="searchcat"></td>
 </tr>
 </table>    
+</form>    
 
     
 </div>     
@@ -194,7 +236,7 @@ else
         { 
         echo " <a href='productinfo.php?id=".$row['pid']." '><div id='all-size'> 
         
-                        <div id='all-img' style='background:url("  .$row['pimgadd'].  "); background-size:cover;' ></div>
+                        <div id='all-img' style='background:url(images/"  .$row['pimgadd'].  "); background-size:cover;' ></div>
                 
                         <span><center><small>" 
                         .$row["pname"]. "<br>" .$row["off"]. "% Off </small> 
@@ -232,6 +274,12 @@ else
     var a = document.getElementById("cartno");
     a.innerHTML = <?php $x = $x-1; echo $x ?>;
     
+     window.omload = slider();
+    function slider(){
+        var one = document.getElementById("sliderval1").value;
+        var two = document.getElementById("sliderval2");
+        two.innerHTML = "Rs. 0 to " + one;
+    }
 </script>
 </body>
 </html>

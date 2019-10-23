@@ -38,7 +38,7 @@ session_start();
     background-color: aquamarine;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 135px;
+    font-size: 15px;
     border-style: outset;
     }
 #right-nav-upper1{
@@ -82,6 +82,15 @@ session_start();
     margin-left: 28%;
     margin-top: 6%;
     }  
+#search-box:hover{
+    background-color: ghostwhite;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+#search-btn:hover{
+    border-radius: 6px;
+    cursor: not-allowed;
+}
 .btn-size:hover{
     width: 100%;
     height: 100px;
@@ -119,11 +128,20 @@ table{
     }
 input{
     width: 80%;
-    height: 235px;
+    height: 25px;
     }
-select{
+#select-avail{
     width: 80%;
-    height: 257px;
+    height: 25px;
+    }
+#imgadd:focus{
+    outline: none;
+    }
+#select-four{
+    width: 39%;
+    }
+#td-one{
+    width: 25%;
     }
 legend{
     font-family: cursive;
@@ -143,10 +161,11 @@ legend{
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" onkeyup="searchfn()" id="search-box" placeholder="Search the Products"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form>
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products" disabled="disabled"/>
+<input type="submit" name="search" value="Search Now" id="search-btn" disabled="disabled"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -154,7 +173,7 @@ legend{
     
 <div id="right-nav-upper1">
     <i class="fa fa-user" style="font-size:20px; margin-right:10px; margin-left:10px;"></i>
-    <?php eccho $details['uname']; ?> -- <?php echo $details['emailadd']; ?> -- <?php echo "[Admin]"; ?>
+    <?php echo $details['uname']; ?> -- <?php echo $details['emailadd']; ?> -- <?php echo "[Admin]"; ?>
     
 <div id="right-nav-upper2">
     <span id="login-as"><a href="index.php">Logout as Admin</a></span>
@@ -169,7 +188,7 @@ legend{
     <li><a href="#">About Us</a></li>
     <li><a href="#">Contact Us</a></li>
     <li><a href="#">Logout</a></li>
-     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"><span id="cartno"><sup>0</sup></span></i></a></li>
+     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
  </ul>
 </div>
 </div>
@@ -187,6 +206,7 @@ legend{
 <a href="addproduct.php"><button class="btn-size">Add Product</button></a>
 <a href="remproduct.php"><button class="btn-size">Remove Product</button></a>
 <a href="updateproduct.php"><button class="btn-size">Update Product</button></a>
+<a href="userquery.php"><button class="btn-size">User Queries</button></a>
 <a href="deleteuser.php"><button class="btn-size">Remove User</button></a>
 
     
@@ -216,29 +236,101 @@ legend{
         </tr>
         <tr>
         <td>Product M.R.P</td>
-        <td><input type="text" placeholder="Product M.R.P" name="pmrp"></td>
+        <td><input type="text" id="pmrp" placeholder="Product M.R.P" name="pmrp"></td>
         </tr>
         <tr>
         <td>Product Price</td>
-        <td><input type="text" placeholder="Product Price" name="pprice"></td>
+        <td><input type="text" id="pprice" id="psave"placeholder="Product Price" oninput="saveoff();" name="pprice"></td>
         </tr>
         <tr>
         <td>Price Save</td>
-        <td><input type="text" placeholder="Price Save" name="psave"></td>
+        <td><input type="text" id="psave" placeholder="Price Save" name="psave"></td>
         </tr>
         <tr>
         <td>Price Off</td>
-        <td><input type="text" placeholder="Price Off" name="off"></td>
+        <td><input type="text" id="poff" placeholder="Price Off" name="off"></td>
+        </tr>
+        <tr>
+        <tr>
+        <td id="td-one">Product Category</td>
+        <td>
+<select id="select-four" name="cata" selected="Mobiles and Laptops">
+<option value="All">-----Product Category 1-----</option>
+<option value="TV and Appliances">TV and Appliances </option>
+<option value="Mens Products">Mens Products</option>
+<option value="Womens Products">Womens Products</option>
+<option value="Furnitures">Furnitures</option>
+<option value="Electronics">Electronics</option>
+<option value="Clothes and Fashion">Clothes and Fashion</option>
+<option value="Beauty Products">Beauty Products</option>
+<option value="Accessories">Accessories</option>
+<option value="Home and Grocery">Home and Grocery</option>
+<option value="Mobiles and Laptops">Mobiles and Laptops</option>
+<option value="Health and Sports Wear">Health and Sports Wear</option>
+</select>   
+<select id="select-four" name="catb">
+<option value="All">-----Product Category 2-----</option>
+<option value="TV and Appliances">TV and Appliances </option>
+<option value="Mens Products">Mens Products</option>
+<option value="Womens Products">Womens Products</option>
+<option value="Furnitures">Furnitures</option>
+<option value="Electronics">Electronics</option>
+<option value="Clothes and Fashion">Clothes and Fashion</option>
+<option value="Beauty Products">Beauty Products</option>
+<option value="Accessories">Accessories</option>
+<option value="Home and Grocery">Home and Grocery</option>
+<option value="Mobiles and Laptops">Mobiles and Laptops</option>
+<option value="Health and Sports Wear">Health and Sports Wear</option>
+</select>
+<select id="select-four" name="catc">
+<option value="All">-----Product Category 3-----</option>
+<option value="TV and Appliances">TV and Appliances </option>
+<option value="Mens Products">Mens Products</option>
+<option value="Womens Products">Womens Products</option>
+<option value="Furnitures">Furnitures</option>
+<option value="Electronics">Electronics</option>
+<option value="Clothes and Fashion">Clothes and Fashion</option>
+<option value="Beauty Products">Beauty Products</option>
+<option value="Accessories">Accessories</option>
+<option value="Home and Grocery">Home and Grocery</option>
+<option value="Mobiles and Laptops">Mobiles and Laptops</option>
+<option value="Health and Sports Wear">Health and Sports Wear</option>
+</select>
+<select id="select-four" name="catd">
+<option value="All">-----Product Category 4-----</option>
+<option value="TV and Appliances">TV and Appliances </option>
+<option value="Mens Products">Mens Products</option>
+<option value="Womens Products">Womens Products</option>
+<option value="Furnitures">Furnitures</option>
+<option value="Electronics">Electronics</option>
+<option value="Clothes and Fashion">Clothes and Fashion</option>
+<option value="Beauty Products">Beauty Products</option>
+<option value="Accessories">Accessories</option>
+<option value="Home and Grocery">Home and Grocery</option>
+<option value="Mobiles and Laptops">Mobiles and Laptops</option>
+<option value="Health and Sports Wear">Health and Sports Wear</option>
+</select>
+</td>
+    </tr>
+         
+        <tr>
+        <td id="td-one">Product Quality</td>
+        <td>
+            <select id ="select-avail" name="pquality">
+                <option value="Original">Original or Branded</option>
+                <option value="Local">Local or Duplicate</option>
+            </select>    
+        </td>
         </tr>
         <tr>
         <td>Product Availability</td>
         <td>
-<select name="pavail">
+<select id="select-avail" name="pavail">
 <option value="Currently Available" >Currently Available</option>
 <option value="Currently Unavailable">Currently Unavailable</option>
 </select>    
 </td>
-        </tr>
+            </tr>    
         <tr>
         <td>Product Details 1</td>
         <td><input type="text" name="pla"></td>
@@ -265,7 +357,11 @@ legend{
         </tr>
         <tr>
         <td>Upload Image</td>
-        <td><input type="file"  name="pimgadd"></td>
+        <td><input type="file" accept="image/*" id="imgurl" name="imgadd" onchange="preview();"></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><div id="preview-div" style="width:200px; height:200px; border:1px solid black;"></div></td>
         </tr>
         <tr>
         <td><input type="submit" name="addbtn" value="Add Now"></td>
@@ -281,6 +377,35 @@ legend{
     
 </div>    
     
-
+ <script>
+     function saveoff()
+     {
+    var a = document.getElementById("pmrp").value;
+    var b = document.getElementById("pprice").value;
+    var c = document.getElementById("psave");
+    var d = document.getElementById("poff");
+    
+    var e = a-b;
+    var f = parseInt(((a-b)/a)*100);
+        
+         c.setAttribute("value", e);
+         d.setAttribute("value", f);c.setAttribute("value", e);
+         c.setAttribute("placeholder", e);
+         d.setAttribute("value", f);
+         d.setAttribute("placeholder", f);
+     }
+     
+     function preview(){
+         var input = document.getElementById("imgurl");
+         var freader = new FileReader();
+         freader.readAsDataURL(input.files[0]);
+         freader.onloadend = function(event){
+                    var prdiv = document.getElementById("preview-div");
+                    prdiv.style.background = "url("+event.target.result+")";
+                    prdiv.style.backgroundSize = "cover";
+                }
+     }
+    
+    </script>
 </body>
 </html>
