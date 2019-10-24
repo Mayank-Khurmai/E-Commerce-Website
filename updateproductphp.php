@@ -25,7 +25,7 @@ if (isset($_POST['addbtn']))
     $ple = mysqli_real_escape_string($db, $_POST['ple']);
     $pdesc = mysqli_real_escape_string($db, $_POST['pdesc']);
     $pimgadd1 = $_FILES['imgadd']['name'];
-    if($pimgadd1 = "abcd ")
+    if($pimgadd1 == "")
         {
         $db = mysqli_connect("localhost", "root", "", "myshopdb");
         $sql5 = "UPDATE productinfo SET pname='$pname' , pmrp='$pmrp' , pprice='$pprice' , psave='$psave' , off='$off' , cata='$cata', catb='$catb',
