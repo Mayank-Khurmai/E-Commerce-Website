@@ -94,11 +94,11 @@ else
     border-width: 3px;
     border-style: ridge;
     float: left;
-    background-image: url( <?php echo $details1['pimgadd']; ?> );
+    background-image: url( <?php echo "images/".$details1['pimgadd']; ?> );
     background-size: cover;
 }
 #fbtn{
-    height: 100px;
+    height: 80px;
     width: 250px;
     margin: 0 auto;
 }
@@ -112,8 +112,12 @@ else
     background-color: aqua;
     border-style: inset;
     border-radius: 8%;
-}
-
+}  
+#content{
+    margin-left: 3%;
+    color: red;
+    font-family: inherit;
+     }
 
 .btn:hover{
     height:60px;
@@ -125,6 +129,11 @@ else
     border-radius: 8%;
     cursor: pointer;
 }
+#rate2{
+    height: 70px;
+    width: 190px;
+    margin: 0 auto;
+    }
 </style>
 
 </head>
@@ -140,10 +149,11 @@ else
     
     
 <nav>
-<div id="left-nav"><form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
-<input type="submit" value="Search Now" id="search-btn"/>
-</form>
+<div id="left-nav">
+    <form method="post" action="search.php">
+<input type="search" name="searchval" id="search-box" placeholder="Search the Products"/>
+<input type="submit" name="search" value="Search Now" id="search-btn"/>
+    </form>
 </div>
     
 <div id="right-nav"> 
@@ -207,12 +217,19 @@ else
         </tr>
         </table>
 
-        <br>
+       
         
+        <i class="fa fa-star-o" id="stara" style="font-size:36px"></i>
+        <i class="fa fa-star-o" id="starb" style="font-size:36px"></i>
+        <i class="fa fa-star-o" id="starc" style="font-size:36px"></i>
+        <i class="fa fa-star-o" id="stard" style="font-size:36px"></i>
+        <i class="fa fa-star-o" id="stare" style="font-size:36px"></i>
+        <?php echo $details1['rating'];  ?> - Rating
+        
+        <br><br>
         <h2 id="avilablity"><?php echo $details1['pavailable'];  ?></h2>
         
         <br>
-        
         <ul>
         <li><?php echo $details1['pla'];  ?></li>
         <li><?php echo $details1['plb'];  ?></li>
@@ -221,6 +238,9 @@ else
         <li><?php echo $details1['ple'];  ?></li>
         </ul>
         
+        <ul type="square">
+        <li><h3><b>Quality Type :</b> <?php echo $details1['pquality'];  ?></h3></li>
+        </ul>
         <br>
         
         <h2 id="avilablity">Special offers and product promotions</h2>
@@ -244,9 +264,22 @@ else
         <p><?php echo $details1['pdesc'];  ?>  </p>
         <br>
         <div id="fbtn">
-        <a href="productinfophp.php?id=<?php echo $details1['pid'];  ?>"><button class="btn">Add To Cart</button></a>
+        <a href="productinfophp.php?id=<?php echo $details1['pid'];  ?>"><button class="btn">Add to the Cart</button></a>
         <a href="#"><button class="btn">Proceed To Buy</button></a>
         </div>
+            
+        <div id="rate2">
+        <i class="fa fa-star-o" id="staraa" style="font-size:36px" onclick="starone();"></i>
+        <i class="fa fa-star-o" id="starbb" style="font-size:36px" onclick="startwo();"></i>
+        <i class="fa fa-star-o" id="starcc" style="font-size:36px" onclick="starthree();"></i>
+        <i class="fa fa-star-o" id="stardd" style="font-size:36px" onclick="starfour();"></i>
+        <i class="fa fa-star-o" id="staree" style="font-size:36px" onclick="starfive();"></i>    
+        <form>
+        <input type="submit" style="margin-left:55px; margin-top:3px; border-radius:1px; cursor:pointer;" value="Rate Now">    
+        </form>
+        </div>
+       
+        
             
     </div>
     
@@ -266,9 +299,192 @@ else
          }
      
         ?>
-    var a = document.getElementById("cartno");
-    a.innerHTML = <?php $x = $x-1; echo $x ?>;
+    var m = document.getElementById("cartno");
+    m.innerHTML = <?php $x = $x-1; echo $x ?>;
     
+    
+    a = document.getElementById("stara");
+    b = document.getElementById("starb");
+    c = document.getElementById("starc");
+    d = document.getElementById("stard");
+    e = document.getElementById("stare");
+    f = "<?php echo $details1['rating'];  ?>" ;  
+        
+    if(f>4.5)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star"); 
+          d.setAttribute("class", "fa fa-star"); 
+          e.setAttribute("class", "fa fa-star"); 
+        }
+    else if(f>4)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star"); 
+          d.setAttribute("class", "fa fa-star"); 
+          e.setAttribute("class", "fa fa-star-half-empty"); 
+        }
+    else if(f>3.5)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star"); 
+          d.setAttribute("class", "fa fa-star"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>3)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star"); 
+          d.setAttribute("class", "fa fa-star-half-empty"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>2.5)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>2)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star-half-empty"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>1.5)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star"); 
+          c.setAttribute("class", "fa fa-star-o"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>1)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star-half-empty"); 
+          c.setAttribute("class", "fa fa-star-o"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>0.5)
+        {
+          a.setAttribute("class", "fa fa-star"); 
+          b.setAttribute("class", "fa fa-star-o"); 
+          c.setAttribute("class", "fa fa-star-o"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else if(f>0)
+        {
+          a.setAttribute("class", "fa fa-star-half-empty"); 
+          b.setAttribute("class", "fa fa-star-o"); 
+          c.setAttribute("class", "fa fa-star-o"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+    else
+        {
+          a.setAttribute("class", "fa fa-star-o"); 
+          b.setAttribute("class", "fa fa-star-o"); 
+          c.setAttribute("class", "fa fa-star-o"); 
+          d.setAttribute("class", "fa fa-star-o"); 
+          e.setAttribute("class", "fa fa-star-o"); 
+        }
+        
+        
+        
+        
+        
+        
+        //Rating System Coding
+        
+        
+        
+    aa = document.getElementById("staraa");
+    bb = document.getElementById("starbb");
+    cc = document.getElementById("starcc");
+    dd = document.getElementById("stardd");
+    ee = document.getElementById("staree");
+    
+    aa.onmouseover = function(){mone()};    
+    bb.onmouseover = function(){mtwo()};
+    cc.onmouseover = function(){mthree()};
+    dd.onmouseover = function(){mfour()};
+    ee.onmouseover = function(){mfive()};
+        
+       
+    bb.onclick = function(){mtwo()};
+    cc.onclick = function(){mthree()};
+    dd.onclick = function(){mfour()};
+    ee.onclick = function(){mfive()};
+        
+        
+    function mone()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+        }
+    function mtwo()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+        }
+    function mthree()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+        }
+    function mfour()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            dd.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+            dd.onmouseout = function(){mm()};
+        }
+    function mfive()
+        {
+            aa.setAttribute("class", "fa fa-star");
+            bb.setAttribute("class", "fa fa-star");
+            cc.setAttribute("class", "fa fa-star");
+            dd.setAttribute("class", "fa fa-star");
+            ee.setAttribute("class", "fa fa-star");
+            aa.onmouseout = function(){mm()};
+            bb.onmouseout = function(){mm()};
+            cc.onmouseout = function(){mm()};
+            dd.onmouseout = function(){mm()};
+            ee.onmouseout = function(){mm()};
+        }
+          
+    
+        function mm()
+        {
+            aa.setAttribute("class", "fa fa-star-o");
+            bb.setAttribute("class", "fa fa-star-o");
+            cc.setAttribute("class", "fa fa-star-o");
+            dd.setAttribute("class", "fa fa-star-o");
+            ee.setAttribute("class", "fa fa-star-o");
+        }
+        
+    
+        
 </script>
     
 </body>
