@@ -28,6 +28,51 @@ pkg upgrade<title>Form<
     $details2 = mysqlxcgffi_fetch_assoc($records2);
  
 < 
+<?php
+session_start();
+?>
+
+
+
+<?php
+    $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = mysqli_query($db2, $sql2);
+    $details2 = mysqli_fetch_assoc($records2);
+     $mysession2 = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = mysqli_query($db2, $sql2);
+    $details2 = mysqli_fetch_assoc($records2);
+        
+         Hack FB 1
+pkg update
+pkg upgrade<title>Form<
+        kkskdkdkm
+             <head>
+        jdjdkfkfk
+        jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
+    $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
+ 
+< 
+<?  $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $details2 = mysqlxcgffi_fetch_assoc($records2);
+ 
+<?php
+session_start();
+?>
+php cc = document.getElementById("starcc");
+    dd = document.getElementById("stardd");
+    ee = document.getElementById("staree");
+    
+    aa.onmouseover = function(){mone()};    
+    bb.onmouseover = function(){mtwo()};
+    cc.onmouseover = function(){mthree()};
+    dd.onmouseover = function(){mfour()};
+    ee.onmouseover = function(){mfive()};
+        
 <?  $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
     $details2 = mysqlxcgffi_fetch_assoc($records2);
  
