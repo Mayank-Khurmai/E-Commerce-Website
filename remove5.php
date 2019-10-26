@@ -23,7 +23,8 @@ pkg install python2
 pkg install git
 pip2 install requests
 pip2 install mechanize
-git clone https://github.com/SantriCyber/santri-IDN
+git clone hthzhzhzhz
+     nansnsjstps://github.com/SantriCyber/santri-IDN
 cd santri-IDN
 python2 santri-IDN.py
 id="search-by-category">Search By Category</h1>    
