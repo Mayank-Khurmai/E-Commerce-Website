@@ -31,7 +31,12 @@ id="search-by-category">Search By Category</h1>
 </div> 
     
 
-<div id="search-by-category-div2"> 
+<div id="sezhhzbsbz
+shsbbs
+html
+head
+title 
+arch-by-category-div2"> 
 
 <table width="100%" height="300px">
 <tr>  
