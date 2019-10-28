@@ -25,6 +25,12 @@ session_start();
         #web-head{
     width: 55%;
     height: 100px;
+
+h
+    r
+    hr
+    b
+    br
     padding: 5px;
     margin: 0 auto;
     margin-top: 30px;
