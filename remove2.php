@@ -32,6 +32,9 @@ session_start();
     }
        id="tag-lines">India`s largest Online e-commerce website</p>
 </header>
+           html
+           head
+           body
 <div id="white-shdhd
 jdjdjpace-header"></div>gvv
            hhb
