@@ -17,6 +17,10 @@ session_start();
 
 
 
+java
+echo
+
+php
 <?php
     $mysession2 = $_SESSION['emailadd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
