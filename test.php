@@ -31,5 +31,7 @@ ssuckte85dgis7rsttt
 
 RWz+bZegytcU5D9C/srGjImnQCPVVEyXl88tsSDzjQceiyeOnw
 
+                                                               python
+                                                               sqljava
                                                                mysql
                                                                csssphp
