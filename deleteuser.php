@@ -27,7 +27,13 @@ session_start();
     }    
 #btn{
     width: 50%;
-    height: auto;
+    (isset($_POST['registerbtn']))
+{
+    $cuname = mysqli_real_escape_string($db, $_POST['cname']);
+    $cemail = mysqli_real_escape_string($db, $_POST['cemail']);
+    $cmobile = mysqli_real_escape_string($db, $_POST['cmobile']);
+    $csubject = mysqli_real_escape_string($db, $_POST['csubject']);
+    $ctext = mysqli_real_escape_string($db: auto;
     margin: 0 auto;
     } 
    
@@ -47,7 +53,13 @@ session_start();
 #right-nav-upper2{
     width:100%;
     height:50px;
-    z-index: 1;
+    (isset($_POST['registerbtn']))
+{
+    $cuname = mysqli_real_escape_string($db, $_POST['cname']);
+    $cemail = mysqli_real_escape_string($db, $_POST['cemail']);
+    $cmobile = mysqli_real_escape_string($db, $_POST['cmobile']);
+    $csubject = mysqli_real_escape_string($db, $_POST['csubject']);
+    $ctext = mysqli_real_escape_string($db: 1;
     float: right;
     display: none;
     margin-top: -32px;
