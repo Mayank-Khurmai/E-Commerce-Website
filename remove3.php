@@ -30,7 +30,10 @@ php
      $mys
       body
       head
-      p
+      pbvfg
+      htnjgf
+      mggghj
+      tgh
       nav
       ession2 = $_SESSION['emailadd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
