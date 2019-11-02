@@ -12,7 +12,11 @@ $email = stripcslashes($email);
 $password = stripcslashes($password);
 
 if (isset($_POST['loginbtn']))
-{
+{hshd
+ ndnnd
+ nd
+ j
+ 
     $sql = "SELECT * FROM logininfo WHERE emailadd='$email' AND pass='$password'";
     $result = mysqli_query($db, $sql);
                   
