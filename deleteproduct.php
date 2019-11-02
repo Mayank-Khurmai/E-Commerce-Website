@@ -28,7 +28,8 @@ session_start();
     width: 50%;
     height: auto;
     margin: 0 auto;
-    } 
+    } ffj
+    gvv
 .btn-size{
     width: 100%;
     height: 100px;
