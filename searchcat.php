@@ -29,9 +29,6 @@ else
    <style>
 
 #right-nav-upper1{
-    htnl
-    bhai
-    bsbd
     width:48%;
     height:50px;
     z-index: 1;
