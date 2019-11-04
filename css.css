@@ -13,9 +13,7 @@ a{
     color:#323232;
     text-decoration:none;
     font-family:sans-serif;
-}htnl
-
-jdjd
+}
 
 #outer-box{
     width: 100%;
@@ -156,7 +154,7 @@ nav{
 }
 
 #menu ul{
-    display: block;
+    display:block;
     list-style:none;
     padding:9px 0 0 10px;
     margin:0px;
@@ -180,7 +178,7 @@ nav{
 }
 
 #menu ul li{
-    display:inline;
+    display:inline block;
     padding:0px;
     margin:0px;
     height:27px;
@@ -192,7 +190,7 @@ nav{
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    background-color: dimgray;
+    background-color: red;
 }
 
 #side-fix-div{

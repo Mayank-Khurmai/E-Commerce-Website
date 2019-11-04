@@ -35,9 +35,7 @@ a{
     
 h1{
     text-align: center;
-    font-weight: bold;html
-        head.
-        body
+    font-weight: bold;
     font-size: 50px;
     font-family: sans-serif;
     }

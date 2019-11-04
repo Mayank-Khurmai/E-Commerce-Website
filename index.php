@@ -31,9 +31,7 @@ else
 #right-nav-upper1{
     width:48%;
     height:50px;
-    z-index: 1;bbehe
-    hhdhdjd
-    hhenen
+    z-index: 1;
     float: right;
     margin-top: 2px;
     font-size: 17px;
