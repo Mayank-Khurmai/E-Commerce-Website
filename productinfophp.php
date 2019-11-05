@@ -29,7 +29,8 @@ session_start();
     $d = $details1['pprice'];
     $sql4 = "INSERT INTO carttable(emailadd, pid, pname, pprice) VALUES('$a', '$b', '$c', '$d')";
     mysqli_query($db2, $sql4);
-    include htndbd
+    include htndbdgshsbsbdnd
+        jdjd
         ndb'productinfo.php';
     
 ?>
