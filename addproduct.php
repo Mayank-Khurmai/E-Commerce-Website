@@ -28,7 +28,7 @@ session_start();
 #btn{
     width: 50%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 autbody.haedo;
     } 
 .btn-size{
     width: 100%;
