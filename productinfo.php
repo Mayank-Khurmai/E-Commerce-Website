@@ -47,6 +47,10 @@ else
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+a{
+    text-decoration: none;
+    }    
+
 #right-nav-upper1{
     width:48%;
     height:50px;
@@ -224,7 +228,7 @@ else
         <i class="fa fa-star-o" id="starc" style="font-size:36px"></i>
         <i class="fa fa-star-o" id="stard" style="font-size:36px"></i>
         <i class="fa fa-star-o" id="stare" style="font-size:36px"></i>
-        <?php echo $details1['rating'];  ?> - Rating
+        <?php echo $details1['rating'];  ?> [<?php echo $details1['trating'];  ?>]- Rating
         
         <br><br>
         <h2 id="avilablity"><?php echo $details1['pavailable'];  ?></h2>
@@ -269,14 +273,22 @@ else
         </div>
             
         <div id="rate2">
-        <i class="fa fa-star-o" id="staraa" style="font-size:36px" onclick="starone();"></i>
-        <i class="fa fa-star-o" id="starbb" style="font-size:36px" onclick="startwo();"></i>
-        <i class="fa fa-star-o" id="starcc" style="font-size:36px" onclick="starthree();"></i>
-        <i class="fa fa-star-o" id="stardd" style="font-size:36px" onclick="starfour();"></i>
-        <i class="fa fa-star-o" id="staree" style="font-size:36px" onclick="starfive();"></i>    
-        <form>
-        <input type="submit" style="margin-left:55px; margin-top:3px; border-radius:1px; cursor:pointer;" value="Rate Now">    
-        </form>
+        <a href='productinforate.php?id=1&pid=<?php echo $mysession1; ?>' target="_blank">
+            <i class="fa fa-star-o" id="staraa" style="font-size:36px" onclick="starone();"></i>
+        </a>
+        <a href='productinforate.php?id=2&pid=<?php echo $mysession1; ?>' target="_blank">
+            <i class="fa fa-star-o" id="starbb" style="font-size:36px" onclick="startwo();"></i>
+        </a>
+        <a href='productinforate.php?id=3&pid=<?php echo $mysession1; ?>' target="_blank">
+            <i class="fa fa-star-o" id="starcc" style="font-size:36px" onclick="starthree();"></i>
+        </a>
+        <a href='productinforate.php?id=4&pid=<?php echo $mysession1; ?>' target="_blank">
+            <i class="fa fa-star-o" id="stardd" style="font-size:36px" onclick="starfour();"></i>
+        </a>
+        <a href='productinforate.php?id=5&pid=<?php echo $mysession1; ?>' target="_blank">
+            <i class="fa fa-star-o" id="staree" style="font-size:36px" onclick="starfive();"></i> 
+        </a>
+        
         </div>
        
         

@@ -15,10 +15,7 @@ if (isset($_POST['loginbtn']))
 {
     $sql = "SELECT * FROM logininfo WHERE emailadd='$email' AND pass='$password'";
     $result = mysqli_query($db, $sql);
-             
-        $email = $_POST['loginmail'];
-        $password = $_POST['loginpassword'];
-      
+                  
     
          if (mysqli_num_rows($result)>0)
            {   
