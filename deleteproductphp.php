@@ -13,4 +13,7 @@ session_start();
     $records2 = mysqli_query($db2, $sql2);                
     include 'deleteproduct.php';
 
-?> 
+?> Html
+Hello
+
+bodycss
