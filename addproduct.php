@@ -19,6 +19,7 @@ session_start();
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="css2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="animate.css">
 <style>
@@ -28,7 +29,7 @@ session_start();
 #btn{
     width: 50%;
     height: auto;
-    margin: 0 autbody.haedo;
+    margin: 0 auto;
     } 
 .btn-size{
     width: 100%;
