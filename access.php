@@ -74,6 +74,20 @@ else
     color: red;
     font-family: inherit;
        } 
+   #right-nav-upper1{
+    width:48%;
+    height:50px;
+    z-index: 1;
+    float: right;
+    margin-top: 2px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: darkgray;
+    padding: 10px;
+}     
+        
 #content1{
     margin-left: 3%;
     margin-top: 1%;
