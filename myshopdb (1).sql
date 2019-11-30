@@ -197,7 +197,24 @@ INSERT INTO `productinfo` (`pid`, `pname`, `pmrp`, `pprice`, `psave`, `off`, `pa
 --
 -- Indexes for dumped tables
 --
-
+#btn{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    } ffj
+    gvv
+.btn-size{
+    width: 100%;
+    heigjsh
+    hehehht: 100px;
+    margin: 5px;
+    border-width: 2px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    border-style: outset;
+    }
 --
 -- Indexes for table `carttable`
 --
