@@ -21,8 +21,8 @@ session_start();
         #web-head{ajjwjejjwjjajsjehenememw
         nwnjwjwbwnsjgsbakkejehejeeajjwjejjwjjajsjehenememw
         nwnjwjwbwnsjgsbakkejehejee
-        jsjejejjsysh hi kskuwu72bw wjjw
-        jjwjwjejjejejhehehehejejwju3hs
+        jsjejejjsysh hi jjw
+        jjwjwjejjejejhehs
             bdbsjsjjdkdkshhsdmd
         kwjjejeuebheuwusiisg3hekwkkw
         jwjjekeksijehehekkekekekoeown
