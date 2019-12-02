@@ -13,11 +13,7 @@ session_start();
         msjjwnwjeiwosiwhhenekwkw
         jwjwjwjwjjhusuhshsjwjjs
         jajwjnwnwnwnwjjwjwjejejj
-        ajjwjejjwjjajsjehenememw
-        nwnjwjwbwnsjgsbakkejehejee
-        jsjejejjsysh hi kskuwu72bw wjjw
-        jjwjwjejjejejhehehehejejwju3hs
-        kwjjejeuebheuwusiisg3hekwkkw
+        
         jwjjekeksijehehekkekekekoeown
         ords2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
@@ -27,6 +23,7 @@ session_start();
         nwnjwjwbwnsjgsbakkejehejee
         jsjejejjsysh hi kskuwu72bw wjjw
         jjwjwjejjejejhehehehejejwju3hs
+            bdbsjsjjdkdkshhsdmd
         kwjjejeuebheuwusiisg3hekwkkw
         jwjjekeksijehehekkekekekoeown
         ords2 = mysqli_query($db2, $sql2);
