@@ -49,14 +49,7 @@ p
     }
        id="tag-lines">India`s largest Online e-commerce website</p>
 </header>
-           htmlhhh
-           ggghj
-           ffbnn
-           ffb
-        jsjejejjsysh hi kskuwu72bw wjjw
-        jjwjwjejjejejhehehehejejwju3hs
-        kwjjejeuebheuwusiisg3hekwkkw
-        jwjjekeksijehehekkekekekoeown
+
         ords2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
  
