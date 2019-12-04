@@ -49,7 +49,7 @@ if (isset($_POST['addbtn']))
 
 <script> 
   alert("<?php 
-        
+        hello user
     $pname = mysqli_real_escape_string($db, $_POST['pname']);   
 
         echo "$pname,  Successfully Added!";
