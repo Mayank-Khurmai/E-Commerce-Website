@@ -4,6 +4,14 @@ session_start();
 $msg = "";
 $db = mysqli_connect("localhost", "root", "", "myshopdb");
 
+<?php
+    $a = $_GET['id'];
+    $b = $_SESSION['emailadd'];
+    $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
+    $sql2 = "DELETE FROM logininfo WHERE emailadd ='$a' ";
+    $records2 = mysqli_query($db2, $sql2);                
+    include 'deleteuser.php';
+?> 
 if (isset($_POST['addbtn']))
 {    
     $pname = mysqli_real_escape_string($db, $_POST['pname']);
