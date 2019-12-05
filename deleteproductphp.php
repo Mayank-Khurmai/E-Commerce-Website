@@ -24,7 +24,7 @@ Come up with the most innovative ideas and change your imagination into reality 
 
 _Register now_, for a chance to compete with the best and to win exciting _*cash prizes worth Rs.40,000*_ as well as *_$1000 BUGSEE credits, 100+ free T-shirts, stickers, food & many more goodies!_*.
 
-*✨(Registration Fee == NULL)✨*
+*✨(Registration Fee == NULL null add)✨*
 
 _Visit our website now, to know all about the Hack!_
 *https://mujhacks.co*
