@@ -17,7 +17,8 @@ session_start();
 *MUJ ACM S-CHAP* is back with the newest edition of *BIGGEST HACKATHON* MUJ has ever witnessed!!👨🏻‍💻👩🏻‍💻
 
                  🌐 *MUJ HACKS 4.0* 🌐
- 
+    ffg
+ 955df9064848
 _*A National level development competition*_ for testing the all round ability of the participants involved.
 
 Come up with the most innovative ideas and change your imagination into reality   with the applications which can solve our _*Real World Problems!*_
