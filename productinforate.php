@@ -8,7 +8,7 @@ session_start();
 <?php
     $pid = $_GET['pid'];
     $rate = $_GET['id'];
-    
+    C00xJknQOk
 
     $mysession1 = $_GET['pid'];
     $db1 = mysqli_connect("localhost", "root", "", "myshopdb");
@@ -17,7 +17,7 @@ session_start();
     $details1 = mysqli_fetch_assoc($records1);
     $urating = $details1['rating']; 
     $utrating = $details1['trating']; 
-
+C00xJknQOk
     $ufrating = ($urating + $rate)/2;
     $uftrating = $utrating +1;
 
