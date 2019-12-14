@@ -38,7 +38,7 @@ C00xJknQOk
 <body>
 
     
-    <h1>Thank You for Your Valuable Rating</h1>
+    <h1>Thank You for Your Valuable Rating feedback</h1>
    <script>
     
     window.close();
