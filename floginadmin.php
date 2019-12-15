@@ -38,7 +38,7 @@ a{
     }
     
 #body-box{
-    width: 99%;
+    width: 990%;
     height: 820px;
     margin: 0 auto;
     border-color: red;
@@ -53,7 +53,8 @@ a{
     
 #web-head{
     width: 55%;
-    height: 100px;
+    height: 100
+px;
     padding: 5px;
     margin: 0 auto;
     margin-top: 30px;
@@ -69,7 +70,7 @@ h1{
     
 #signin-fieldset{
     width: 55%;
-    height: 310px;
+    height: 310px; ji
     margin: 0 auto;
     border-color: black;
     border-width: 2px;
@@ -99,7 +100,7 @@ td{
     
 #code2{
     width: 100%;
-    height: 35px;  
+    height: 375px;  
     }
 legend{
     font-family: cursive;
