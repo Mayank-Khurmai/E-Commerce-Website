@@ -41,7 +41,7 @@ a{
     width: 990%;
     height: 820px;
     margin: 0 auto;
-    border-color: red;
+    border-color: darkred;
     border-width: 10px;
     border-style: groove;
     }    
