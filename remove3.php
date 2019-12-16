@@ -174,7 +174,7 @@ session_start();
     
 <nav>
 <form>
-<input type="search" name="search" id="search-box" placeholder="Search this site"/>
+<input type="search" name="search" id="search-box" placeholder="Search this now site"/>
 <input type="submit" value="Search Now" id="search-btn"/>
 </form>
 <table id="nav-table">
