@@ -23,7 +23,7 @@ session_start();
 
 <?php
 
-    $a = $_SESSION['emailadd'];
+    $a = $_SESSION['emailad2d'];
     $b = $_GET['id'];
     $c = $details1['pname'];
     $d = $details1['pprice'];
