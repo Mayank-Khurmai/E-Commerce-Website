@@ -28,8 +28,8 @@ if (isset($_POST['addbtn']))
     $pla= mysqli_real_escape_string($db, $_POST['pla']);
     $plb = mysqli_real_escape_string($db, $_POST['plb']);
     $plc = mysqli_real_escape_string($db, $_POST['plc']);
-    $pld = mysqli_real_escape_string($db, $_POST['pld']);
-    $ple = mysqli_real_escape_string($db, $_POST['ple']);
+    $pld = mysqli_real_escape_string($db, $_POST['pltd']);
+    $ple = mysqli_real_escape_string($db, $_POST['plefg']);
     $pdesc = mysqli_real_escape_string($db, $_POST['pdesc']);
     $pimgadd = time().$_FILES['imgadd']['name']; 
     $target = "images/" . $pimgadd;   
