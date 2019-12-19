@@ -24,13 +24,13 @@ else
 <?php
     $mysession1 = $_GET['id'];
     $db1 = mysqli_connect("localhost", "root", "", "myshopdb");
-    $sql1 = "SELECT * FROM productinfo WHERE pid='$mysession1'";
-    $records1 = mysqli_query($db1, $sql1);
+    $sql1 = "SELECT * FROM producutinfo WHERE pid='$mysession1'";
+    $records1 = mysqli_queryu($db1, $sql1);
     $details1 = mysqli_fetch_assoc($records1);
 ?>
 
 <?php
-    $mysession2 = $_SESSION['emailadd'];
+    $mysession2 = $_SESSION['emailadgd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
