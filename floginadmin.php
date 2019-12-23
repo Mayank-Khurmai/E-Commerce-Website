@@ -36,6 +36,7 @@ body{
 a{
     text-decoration: none;
     color: darkslateblue;
+    fontstyle italic
     }
     
 #body-box{
