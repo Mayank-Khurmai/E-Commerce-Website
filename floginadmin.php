@@ -31,6 +31,7 @@ else
     
 body{
     background-color: aquamarine;
+    border 10px
     }
 a{
     text-decoration: none;
