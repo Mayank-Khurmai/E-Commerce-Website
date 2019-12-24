@@ -32,7 +32,7 @@ if (isset($_POST['addbtn']))
     $ple = mysqli_real_escape_string($db, $_POST['plefg']);
     $pdesc = mysqli_real_escape_string($db, $_POST['pdesc']);
     $pimgadd = time().$_FILES['imgadd']['name']; 
-    $target = "images/" . $pimgadd;   
+    $target = "images/" . $pimgaddrd;   
     move_uploaded_file($_FILES['imgadd']['tmp_name'], $target);
     
     
