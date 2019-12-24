@@ -40,7 +40,7 @@ if (isset($_POST['addbtn']))
     $db = mysqli_connect("localhost", "root", "", "myshopdb");
     mysqli_query($db, $sql5);
      
-    include 'addproduct.php';
+    include 'addproduct3.php';
  
 }
 ?>
@@ -49,7 +49,7 @@ if (isset($_POST['addbtn']))
 
 <script> 
   alert("<?php 
-        hello user
+        hello user, how are you
     $pname = mysqli_real_escape_string($db, $_POST['pname']);   
 
         echo "$pname,  Successfully Added!";
