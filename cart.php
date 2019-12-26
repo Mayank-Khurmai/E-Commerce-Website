@@ -25,7 +25,7 @@ else
 
 
 <!DOCTYPE html>
-<html>
+<htmlll>
 <head>
 <title>My Shop</title>
 <link rel="stylesheet" href="css.css">
