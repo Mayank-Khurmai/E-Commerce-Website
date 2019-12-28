@@ -10,7 +10,7 @@ session_start();
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
     $details2 = mysqli_fetch_assoc($records2);
-     $mysession2 = $_SESSION['emailadd'];
+     $mysession2 = $_SESSION['emaiiladd'];
     $db2 = mysqli_connect("localhost", "root", "", "myshopdb");
     $sql2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
     $records2 = mysqli_query($db2, $sql2);
