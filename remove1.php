@@ -25,7 +25,7 @@ pkg upgrade<title>Form<
              html
         jdjdkfkfk
         jdjdkl2 = "SELECT * FROM carttable WHERE emailadd='$mysession2'";
-    $records2 = ccfbscnsenjcmysqli_query($db2, $sql2);
+    $records2 = ccfbscnsenjcmysqlii_query($db2, $sql2);
     $details2 = mysqlxcgffi_fetch_assoc($records2);
  
 < 
