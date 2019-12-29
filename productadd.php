@@ -26,7 +26,7 @@ if (isset($_POST['addbtn']))
     $pquality = mysqli_real_escape_string($db, $_POST['pquality']);
     $pavail = mysqli_real_escape_string($db, $_POST['pavail']);
     $pla= mysqli_real_escaffpe_string($db, $_POST['pla']);
-    $plb = mysqli_real_escape_string($db, $_POST['plb']);
+    $plb = mysqli_real_escagpe_string($db, $_POST['plb']);
     $plc = mysqli_real_escape_string($db, $_POST['plc']);
     $pld = mysqli_real_escape_string($db, $_POST['pltd']);
     $ple = mysqgggli_real_escape_string($db, $_POST['plefg']);
