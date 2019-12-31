@@ -30,8 +30,6 @@ session_start();
     width:48%;
     height:50px;
     z-index: 1;
-    translate : -50 -50;
-    opacity : 0.1
     float: right;
     margin-top: 2px;
     font-size: 17px;
