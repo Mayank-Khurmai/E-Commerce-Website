@@ -11,7 +11,7 @@ exit();
 <script> 
   alert("<?php 
         
-       echo "You Have Successfully Logged In Out";
+       echo "You Have Successfully Logged Out";
         
         ?>"); 
 </script>

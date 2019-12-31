@@ -52,7 +52,7 @@ else
     display: none;
     margin-top: -32px;
     margin-left: -9px;
-    border-radius: 100px;
+    border-radius: 10px;
     position: absolute;
     background-color: darkgray;
     padding: 10px;
@@ -86,7 +86,7 @@ else
     width: 100%;
        }
 #sliderval1{
-    width: 800%;
+    width: 80%;
        }
 </style>
 </head>
