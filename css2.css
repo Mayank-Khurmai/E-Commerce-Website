@@ -21,11 +21,11 @@ a{
 }
 
 header{
-    width:10%;
+    width:100%;
     height:50px;
     box-sizing:border-box;
     background-color: aliceblue;
-    padding:59px;
+    padding:5px;
     position: fixed;
 }
 #white-space-header{
@@ -47,7 +47,7 @@ header{
 
 #tag-lines{
     float:right;
-    font-family:calibri, sensserif;
+    font-family:calibri;
     margin-right:25px;
 }
 

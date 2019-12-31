@@ -31,19 +31,17 @@ else
     
 body{
     background-color: aquamarine;
-    border 10px
     }
 a{
     text-decoration: none;
     color: darkslateblue;
-    fontstyle italic
     }
     
 #body-box{
-    width: 990%;
+    width: 99%;
     height: 820px;
     margin: 0 auto;
-    border-color: darkred;
+    border-color: red;
     border-width: 10px;
     border-style: groove;
     }    
@@ -55,8 +53,7 @@ a{
     
 #web-head{
     width: 55%;
-    height: 100
-px;
+    height: 100px;
     padding: 5px;
     margin: 0 auto;
     margin-top: 30px;
@@ -72,7 +69,7 @@ h1{
     
 #signin-fieldset{
     width: 55%;
-    height: 310px; ji
+    height: 310px;
     margin: 0 auto;
     border-color: black;
     border-width: 2px;
@@ -102,7 +99,7 @@ td{
     
 #code2{
     width: 100%;
-    height: 375px;  
+    height: 35px;  
     }
 legend{
     font-family: cursive;
