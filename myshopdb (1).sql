@@ -93,10 +93,10 @@ CREATE TABLE `logininfo` (
 --
 
 INSERT INTO `logininfo` (`uname`, `emailadd`, `mobileno`, `location`, `pass`, `hashpass`) VALUES
-('Mayank', 'mayankk@gmail.com', 9720315564, 'Uttar Pradesh', 'khurmai', 'e901b88c0198ad207849972cbf1e7cb3'),
-('Pragati', 'pragati@gmail.com', 7905529488, 'Delhi', 'singh', '2865a5b14e5a70273a7d311bfc150f4f'),
+('Mayank', 'mayankk@gmail.com', 9720316764, 'Uttar Pradesh', 'khurmai', 'e901b88c0198ad207849972cbf1e7cb3'),
+('Pragati', 'pragati@gmail.com', 790556488, 'Delhi', 'singh', '2865a5b14e5a70273a7d311bfc150f4f'),
 ('Pranjul', 'pranjul41199@gmail.com', 6386445655, 'Uttar Pradesh', '6789', '46d045ff5190f6ea93739da6c0aa19bc'),
-('Topper', 'priyasharma@gmail.com', 9027420436, 'Uttar Pradesh', 'mayank', '308a3820e4cccbe043cb5228de5e71e3');
+('Topper', 'priyasharma@gmail.com', 9027460436, 'Uttar Pradesh', 'mayank', '308a3820e4cccbe043cb5228de5e71e3');
 
 -- --------------------------------------------------------
 
